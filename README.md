@@ -1,7 +1,6 @@
 # InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models
 
 Lichang Chen*, Jiuhai Chen*, Tom Goldstein, Heng Huang, Tianyi Zhou
-+ * indicates equal contribution.
 
 [[Paper]](https://arxiv.org/abs/2305.02423) [[Website]](https://lichang-chen.github.io/InstructZero/)
 
