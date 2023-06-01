@@ -1,6 +1,6 @@
 # InstrcutZero: Efficient Instruction Optimization for Black-Box Large Language Models.
 
-## [Project page](https://lichang-chen.github.io/) | [Paper](https://lichang-chen.github.io/)
+## [Project page](https://lichang-chen.github.io/InstructZero/) | [Paper](https://arxiv.org/abs/2305.4926697)
 
 
 If you find our paper useful, please consider citing:
