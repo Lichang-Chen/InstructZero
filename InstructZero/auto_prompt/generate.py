@@ -1,5 +1,5 @@
 from faulthandler import disable
-from automatic_prompt_engineer import data, llm
+from auto_prompt import data, llm
 
 
 def get_query(prompt_gen_template, demos_template, subsampled_data):
