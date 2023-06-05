@@ -166,7 +166,8 @@ function trackLocation(e) {
     We evaluate InstructZero on different combinations of open-source LLMs and APIs including Vicuna and ChatGPT. 
     Our results show that InstructZero outperforms SOTA auto-instruction methods across a variety of downstream tasks. 
     <br>
-  <b> TL;DR: </b> The first framework to conduct instruction optimization for black-box LLM like ChatGPT. (Black-box API LLM <b>can only provide textual output</b>.)
+    <br>
+  <b> TL;DR: </b> The first framework to conduct instruction optimization for black-box LLM like ChatGPT, where Black-box API LLM <b>can only provide textual output</b>.
   </p>
   <!-- <br>
   <br> -->
@@ -180,11 +181,14 @@ function trackLocation(e) {
       <p> <b>Pipeline of InstructZero.</b> On each iteration, a soft prompt and a few exemplars of the target task are sent to the open-source LLM for generating an instruction, which then prompts the black-box LLM to produce answers to target-task queries. The score (e.g., accuracy) of the answers and the soft prompt is added as new training data for BO, which updates its posterior about the objective and produces a new soft prompt to explore in the next iteration. Both LLMs are frozen. </p>
     </div>  
   <div>
+    <br>
+    <br>
   <div style="text-align: center;">
       <img width=90% class="center" src="elements/images/method_v1.svg">
       <p>  <b> The pipeline of Bayesian optimization </b> </p>
   </div>
-
+  <br>
+  <br>
   <p align="left">
     We apply BO with instruction-coupled kernel to optimize the soft prompt. For the details, please checkout our paper.
   </p>
