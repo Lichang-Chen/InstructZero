@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from auto_prompt import llm
+from automatic_prompt_engineering import llm
 
 
 def get_eval_method(eval_method):

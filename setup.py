@@ -15,6 +15,7 @@ setup(
         'gradio',
         'torch',
         'botorch',
+        'gpytorch',
         'transformers',
     ],
 )
