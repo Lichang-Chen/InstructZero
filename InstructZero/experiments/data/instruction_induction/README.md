@@ -1,14 +1,14 @@
-From [[APE]][https://github.com/keirp/automatic_prompt_engineer]
-
 # Data
+Data for the instruction induction experiments. Followed [APE][https://github.com/keirp/automatic_prompt_engineer], we collect another 8 instruction induction tasks.
 
-Data for the instruction induction experiments.
 
 ## Content
 
-- annotations: contains the gold annotations, used for reference-based evaluation.
-- induction_input: contains the inputs used in our instruction induction experiments. 
-	Each input is composed of our instruction induction prompt and five task input-output demonstrations.
+- induction_input: includes the inputs utilized in our experiments on instruction induction. Each input consists of our instruction induction prompt along with five demonstrations of task input-output.
 - raw:
-	- induce: contains input-output demonstrations that were used to construct the instruction induction inputs.
-	- execute: held out examples for the execution accuracy evaluation metric.
+	- induce: comprises input-output demonstrations that were utilized in the creation of the instruction induction inputs.
+	- execute: examples that were withheld for evaluating the accuracy of execution.
+
+
+
+
