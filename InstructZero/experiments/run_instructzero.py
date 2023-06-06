@@ -9,7 +9,6 @@ from experiments.evaluation.instruction_induction.exec_accuracy import exec_accu
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from automatic_prompt_engineer import generate, evaluate, config, template, data, llm
 import os
-from load_llama import setup_model_parallel, load
 import sys
 import re
 import transformers
@@ -108,14 +107,6 @@ class LMForwardAPI:
                 model_name,
                 cache_dir=HF_cache_dir
             )
-        elif model_name == "llama":
-            local_rank, world_size = setup_model_parallel()
-            if local_rank > 0:
-                sys.stdout = open(os.devnull, 'w')
-            ckpt_dir = conf['llama']['ckpt_dir']
-            tokenizer_path = conf['llama']['tokenizer_path']
-            self.tokenizer, self.model = load(ckpt_dir, tokenizer_path, local_rank, world_size)
-
         else:
             raise NotImplementedError
 

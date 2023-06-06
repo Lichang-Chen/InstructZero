@@ -6,9 +6,7 @@ setup(
     description='',
     author='Lichang Chen',
     author_email='bobchen@umd.edu',
-    packages=['InstructZero',
-              'automatic_prompt_engineer.evaluation'],
-    package_data={'automatic_prompt_engineer': ['configs/*']},
+    packages=['InstructZero'],
     install_requires=[
         'numpy',
         'openai',
@@ -16,6 +14,7 @@ setup(
         'tqdm',
         'gradio',
         'torch',
-        'botorch'
+        'botorch',
+        'transformers',
     ],
 )

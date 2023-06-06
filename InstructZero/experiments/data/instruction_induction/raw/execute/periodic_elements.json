@@ -1,0 +1,207 @@
+{
+    "metadata": {
+        "num_examples": 50
+    },
+    "examples": {
+        "1": {
+            "input": "113",
+            "output": "nihonium"
+        },
+        "2": {
+            "input": "83",
+            "output": "bismuth"
+        },
+        "3": {
+            "input": "51",
+            "output": "antimony"
+        },
+        "4": {
+            "input": "17",
+            "output": "chlorine"
+        },
+        "5": {
+            "input": "89",
+            "output": "actinium"
+        },
+        "6": {
+            "input": "96",
+            "output": "curium"
+        },
+        "7": {
+            "input": "31",
+            "output": "gallium"
+        },
+        "8": {
+            "input": "74",
+            "output": "tungsten"
+        },
+        "9": {
+            "input": "10",
+            "output": "neon"
+        },
+        "10": {
+            "input": "48",
+            "output": "cadmium"
+        },
+        "11": {
+            "input": "108",
+            "output": "hassium"
+        },
+        "12": {
+            "input": "27",
+            "output": "cobalt"
+        },
+        "13": {
+            "input": "38",
+            "output": "strontium"
+        },
+        "14": {
+            "input": "2",
+            "output": "helium"
+        },
+        "15": {
+            "input": "33",
+            "output": "arsenic"
+        },
+        "16": {
+            "input": "8",
+            "output": "oxygen"
+        },
+        "17": {
+            "input": "35",
+            "output": "bromine"
+        },
+        "18": {
+            "input": "81",
+            "output": "thallium"
+        },
+        "19": {
+            "input": "9",
+            "output": "fluorine"
+        },
+        "20": {
+            "input": "61",
+            "output": "promethium"
+        },
+        "21": {
+            "input": "53",
+            "output": "iodine"
+        },
+        "22": {
+            "input": "66",
+            "output": "dysprosium"
+        },
+        "23": {
+            "input": "23",
+            "output": "vanadium"
+        },
+        "24": {
+            "input": "86",
+            "output": "radon"
+        },
+        "25": {
+            "input": "60",
+            "output": "neodymium"
+        },
+        "26": {
+            "input": "111",
+            "output": "roentgenium"
+        },
+        "27": {
+            "input": "68",
+            "output": "erbium"
+        },
+        "28": {
+            "input": "43",
+            "output": "technetium"
+        },
+        "29": {
+            "input": "71",
+            "output": "lutetium"
+        },
+        "30": {
+            "input": "56",
+            "output": "barium"
+        },
+        "31": {
+            "input": "57",
+            "output": "lanthanum"
+        },
+        "32": {
+            "input": "40",
+            "output": "zirconium"
+        },
+        "33": {
+            "input": "88",
+            "output": "radium"
+        },
+        "34": {
+            "input": "73",
+            "output": "tantalum"
+        },
+        "35": {
+            "input": "16",
+            "output": "sulfur"
+        },
+        "36": {
+            "input": "6",
+            "output": "carbon"
+        },
+        "37": {
+            "input": "34",
+            "output": "selenium"
+        },
+        "38": {
+            "input": "13",
+            "output": "aluminum"
+        },
+        "39": {
+            "input": "49",
+            "output": "indium"
+        },
+        "40": {
+            "input": "80",
+            "output": "mercury"
+        },
+        "41": {
+            "input": "20",
+            "output": "calcium"
+        },
+        "42": {
+            "input": "91",
+            "output": "protactinium"
+        },
+        "43": {
+            "input": "21",
+            "output": "scandium"
+        },
+        "44": {
+            "input": "104",
+            "output": "rutherfordium"
+        },
+        "45": {
+            "input": "58",
+            "output": "cerium"
+        },
+        "46": {
+            "input": "112",
+            "output": "copernicium"
+        },
+        "47": {
+            "input": "54",
+            "output": "xenon"
+        },
+        "48": {
+            "input": "106",
+            "output": "seaborgium"
+        },
+        "49": {
+            "input": "92",
+            "output": "uranium"
+        },
+        "50": {
+            "input": "66",
+            "output": "dysprosium"
+        }
+    }
+}

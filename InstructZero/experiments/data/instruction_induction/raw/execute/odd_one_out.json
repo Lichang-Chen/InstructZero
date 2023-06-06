@@ -1,0 +1,207 @@
+{
+    "metadata": {
+        "num_examples": 50
+    },
+    "examples": {
+        "1": {
+            "input": "twenty, seventeen, laptop, zero",
+            "output": "laptop"
+        },
+        "2": {
+            "input": "spoon, cow, fork, knife, napkin, plate",
+            "output": "cow"
+        },
+        "3": {
+            "input": "bakery, milk, shoe shop, post office, kiosk, restaurant",
+            "output": "milk"
+        },
+        "4": {
+            "input": "lbania, Asia, Africa, America  ",
+            "output": "Albania"
+        },
+        "5": {
+            "input": "bed, dress, tie, skirt, shoe  ",
+            "output": "bed"
+        },
+        "6": {
+            "input": "jump, clap, pencil, read, run  ",
+            "output": "pencil"
+        },
+        "7": {
+            "input": "grapefruit, anana, raspberry, lettuce, grape, avocado  ",
+            "output": "lettuce"
+        },
+        "8": {
+            "input": "yebrow, nose, arm, eyelash  ",
+            "output": "arm"
+        },
+        "9": {
+            "input": "pen, pencil, white, eraser, post-it, clip  ",
+            "output": "white"
+        },
+        "10": {
+            "input": "break, play, do, write  ",
+            "output": "do"
+        },
+        "11": {
+            "input": "garlic, lemon, aubergine, onion, sweet potato  ",
+            "output": "lemon"
+        },
+        "12": {
+            "input": "gin, cognac, wine, water  ",
+            "output": "water"
+        },
+        "13": {
+            "input": "face, swimming, cycling, climbing  ",
+            "output": "face"
+        },
+        "14": {
+            "input": "loudy, rainy, sunny, star  ",
+            "output": "star"
+        },
+        "15": {
+            "input": "skirt, dress, uncle, tie, shirt  ",
+            "output": "uncle"
+        },
+        "16": {
+            "input": ", studied, live, walked  ",
+            "output": "live"
+        },
+        "17": {
+            "input": "grape, plum, fig, potato, peach  ",
+            "output": "potato"
+        },
+        "18": {
+            "input": "ll, snow, rain, wind  ",
+            "output": "doll"
+        },
+        "19": {
+            "input": "actor, doctor, teacher, three, plumber, proctor  ",
+            "output": "three"
+        },
+        "20": {
+            "input": "l, garlic, skirt, basil  ",
+            "output": "skirt"
+        },
+        "21": {
+            "input": "June, four, seventy, twelve, thousand  ",
+            "output": "June"
+        },
+        "22": {
+            "input": "ss, jeans, blouse, grey, socks, shirt  ",
+            "output": "grey"
+        },
+        "23": {
+            "input": "grape, orange, potato, raspberry, kiwi  ",
+            "output": "potato"
+        },
+        "24": {
+            "input": "museum, hospital, school, balcony, church  ",
+            "output": "balcony"
+        },
+        "25": {
+            "input": "square, circle, triangle, trousers, rectangle, pentagon  ",
+            "output": "trousers"
+        },
+        "26": {
+            "input": "ghty, seven, twenty, fifty  ",
+            "output": "seven"
+        },
+        "27": {
+            "input": "bedroom, kitchen, carpet, dining room, bathroom  ",
+            "output": "carpet"
+        },
+        "28": {
+            "input": "lamb, sock, duck, horse, rooster  ",
+            "output": "sock"
+        },
+        "29": {
+            "input": "aser, exciting, ugly, fat, beautiful, slow  ",
+            "output": "eraser"
+        },
+        "30": {
+            "input": "pens, notebook, pencils, erasers, papers  ",
+            "output": "notebook"
+        },
+        "31": {
+            "input": "apple, pear, strawberry, phone, banana  ",
+            "output": "phone"
+        },
+        "32": {
+            "input": "zebra, bee, fly, butterfly, ant, dragonfly  ",
+            "output": "zebra"
+        },
+        "33": {
+            "input": "bath, cottage, skyscraper, hut  ",
+            "output": "bath"
+        },
+        "34": {
+            "input": "May, twelve, three, eleven, hundred  ",
+            "output": "May"
+        },
+        "35": {
+            "input": "nder, on, behind, notebook, above  ",
+            "output": "notebook"
+        },
+        "36": {
+            "input": "Italian, Spanish, Egyptian, China, Chinese  ",
+            "output": "China"
+        },
+        "37": {
+            "input": "mother, cousin, aunt, cup, uncle  ",
+            "output": "cup"
+        },
+        "38": {
+            "input": "football, tennis, basketball, water, water polo, baseball  ",
+            "output": "water"
+        },
+        "39": {
+            "input": "ater, tea, coffe, cookie, beer  ",
+            "output": "cookie"
+        },
+        "40": {
+            "input": ", black, red, apple  ",
+            "output": "apple"
+        },
+        "41": {
+            "input": "your, book, phone, fan, fame, photo  ",
+            "output": "your"
+        },
+        "42": {
+            "input": "nk, interesting, cry, learn, do, dream  ",
+            "output": "interesting"
+        },
+        "43": {
+            "input": "lift, lorry, pavement, vacation, crane  ",
+            "output": "vacation"
+        },
+        "44": {
+            "input": "ler, calculator, stapler, loudspeaker  ",
+            "output": "loudspeaker"
+        },
+        "45": {
+            "input": "able, rabbit, cow, hen  ",
+            "output": "table"
+        },
+        "46": {
+            "input": "boil, type, fry, chop, steam, rinse  ",
+            "output": "type"
+        },
+        "47": {
+            "input": "ye, arm, foot, soap  ",
+            "output": "soap"
+        },
+        "48": {
+            "input": "se, cheese, fruit, vegetables, fish  ",
+            "output": "rose"
+        },
+        "49": {
+            "input": "mouse, dragonfly, ladybug, ant, beetle  ",
+            "output": "mouse"
+        },
+        "50": {
+            "input": "bath, sink, fridge, oven, stove  ",
+            "output": "bath"
+        }
+    }
+}

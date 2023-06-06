@@ -1,0 +1,407 @@
+{
+    "metadata": {
+        "num_examples": 100
+    },
+    "examples": {
+        "1": {
+            "input": "Shaymin, Chatot, and Reshiram",
+            "output": "pokeman"
+        },
+        "2": {
+            "input": "Delta Force Black Hawk Down, Spartans Vs Zombies Defense, and Devil's Workshop",
+            "output": "games on Steam"
+        },
+        "3": {
+            "input": "Sudan, Somaliland, and Madagascar",
+            "output": "African countries"
+        },
+        "4": {
+            "input": "Washing machines, air conditioners, refrigerators",
+            "output": "electric appliances"
+        },
+        "5": {
+            "input": "tantalum, lithium, and manganese",
+            "output": "chemical elements with high density"
+        },
+        "6": {
+            "input": "Uinta Chipmunk, Dwarf Crocodile, and Black Rhinoceros",
+            "output": "animals"
+        },
+        "7": {
+            "input": " Theodore Roosevelt, Benjamin Harrison, and Martin Van Buren",
+            "output": "presidents of the U.S"
+        },
+        "8": {
+            "input": "yellow, blue, green",
+            "output": "colors"
+        },
+        "9": {
+            "input": "Asuka period, Taish\u014d period, and Muromachi period  ",
+            "output": "periods of Japanese history"
+        },
+        "10": {
+            "input": " The Fiscal Times via Yahoo! New Zealand Finance, ITProPortal, and PR Newswire via Yahoo! Finance",
+            "output": "the media"
+        },
+        "11": {
+            "input": " Nara period, Azuchi-Momoyama period, and Kamakura period",
+            "output": "periods of Japanese history"
+        },
+        "12": {
+            "input": "US-MEXICAN WAR, WAR OF AUSTRIA WITH FRANCE AND PIEDMONT, and SECOND ENGLISH CIVIL WAR",
+            "output": "historical wars"
+        },
+        "13": {
+            "input": "californium, uranium, and tin",
+            "output": "chemical elements with high density"
+        },
+        "14": {
+            "input": "Kingdom Wars, LUDWIG, and Nancy Drew Warnings at Waverly Academy  ",
+            "output": "games on Steam"
+        },
+        "15": {
+            "input": "William Howard Taft, Andrew Jackson, and Gerald Ford  ",
+            "output": "presidents of the U.S"
+        },
+        "16": {
+            "input": "Heron's formula, Rogers\u2013Ramanujan identities, and Dvoretzky\u2013Kiefer\u2013Wolfowitz inequality",
+            "output": "math theorems"
+        },
+        "17": {
+            "input": "ValueWalk, Queensland Country Life, and The Fresno Be ",
+            "output": "the media"
+        },
+        "18": {
+            "input": "Wrike, SEMrush, and Sprinklr",
+            "output": "tech companies"
+        },
+        "19": {
+            "input": "  boyfriend (with Social House), Ransom, and Loco Contigo",
+            "output": "popular songs"
+        },
+        "20": {
+            "input": "WebPT, Jumio, and Atlassian",
+            "output": "tech companies"
+        },
+        "21": {
+            "input": "African Spurred Tortoise, Humboldt Penguin, and Cheetah",
+            "output": "animals"
+        },
+        "22": {
+            "input": "Lima, Pyongyang, and Dublin",
+            "output": "capital cities"
+        },
+        "23": {
+            "input": "Reading, running, and cooking",
+            "output": "hobbies"
+        },
+        "24": {
+            "input": "Morocco, Ghana, and Chad  ",
+            "output": "African countries"
+        },
+        "25": {
+            "input": "  Pierre-Auguste Renoir, Pieter Bruegel, and Edouard Manet ",
+            "output": "artists"
+        },
+        "26": {
+            "input": "BMX, Baseball, and Rackets  ",
+            "output": "sports"
+        },
+        "27": {
+            "input": "  Heian period, Kenmu Restoration, and Kofun period ",
+            "output": "periods of Japanese history"
+        },
+        "28": {
+            "input": "Archery, Boxing, and Lacrosse  ",
+            "output": "sports"
+        },
+        "29": {
+            "input": " Greek Tortoise, Pacific White-Sided Dolphin, and American Bison   ",
+            "output": "animals"
+        },
+        "30": {
+            "input": "Semnani, Kamarian, and Bongo  ",
+            "output": "extinct languages"
+        },
+        "31": {
+            "input": "Christianity, Protestant, and Hindu ",
+            "output": "religions"
+        },
+        "32": {
+            "input": "  Egypt, Republic of the Congo, and Guinea ",
+            "output": "African countries"
+        },
+        "33": {
+            "input": "fart, rotten eggs, skunks all",
+            "output": "smells bad"
+        },
+        "34": {
+            "input": "  Wolf, European Hare, and Meerkat ",
+            "output": "animals"
+        },
+        "35": {
+            "input": "  Kobo eReader, Onyx Boox, and Cybook Opus ",
+            "output": "E-Readers that support the mobipocket file format"
+        },
+        "36": {
+            "input": "bad guy , Someone You Loved, and Lalala  ",
+            "output": "popular songs"
+        },
+        "37": {
+            "input": "mainland Australia, Africa, and Asia  ",
+            "output": "continents"
+        },
+        "38": {
+            "input": " Bridgetown, Libreville, and Castries   ",
+            "output": "capital cities"
+        },
+        "39": {
+            "input": "Central African Republic, Cape Verde, and Somalia  ",
+            "output": "African countries"
+        },
+        "40": {
+            "input": "Cars, airplanes, and subway are means of",
+            "output": "transportation"
+        },
+        "41": {
+            "input": "Bra, Nightdress, and Shirts ",
+            "output": "Apparel"
+        },
+        "42": {
+            "input": " Jainism, Atheist, and Mormon   ",
+            "output": "religions"
+        },
+        "43": {
+            "input": "James Buchanan, Barack Obama, and John Quincy Adams ",
+            "output": "presidents of the U.S"
+        },
+        "44": {
+            "input": "Old Man's War, On Basilisk Station, and I, Robot  ",
+            "output": "science fiction books"
+        },
+        "45": {
+            "input": "Nature Reviews Immunology, New England Journal of Medicine, and Energy and Environmental Science  ",
+            "output": "top journals"
+        },
+        "46": {
+            "input": " Pablo Picasso, Gustav Klimt, and Diego Velazquez   ",
+            "output": "artists"
+        },
+        "47": {
+            "input": "Thomas Jefferson, Lyndon B. Johnson, and John F. Kennedy  ",
+            "output": "presidents of the U.S"
+        },
+        "48": {
+            "input": "Sri Jayawardenepura Kotte, Mogadishu, and Beirut  ",
+            "output": "capital cities"
+        },
+        "49": {
+            "input": "  Giardiasis, Malaria, and Coccidioidomycosis ",
+            "output": "infectious diseases"
+        },
+        "50": {
+            "input": "Paniyaram, Chingri malai curry, and Hando Guri ",
+            "output": "indian foods"
+        },
+        "51": {
+            "input": "Like Thomas Hobbes and John Locke, Jean-Jacques Rousseau is another well-knowned",
+            "output": "political philosophers"
+        },
+        "52": {
+            "input": "China, France, Russia, the United Kingdom, and the United States are five",
+            "output": "permanent members of the United Nations"
+        },
+        "53": {
+            "input": " Heriberto Rodriguez, Dylan Papa, and Roderick Wilson   ",
+            "output": "people shot by police"
+        },
+        "54": {
+            "input": "Badminton, Jumping, and Beach Volleyball ",
+            "output": "sports"
+        },
+        "55": {
+            "input": "C++, python, Java are popular",
+            "output": "programming languages"
+        },
+        "56": {
+            "input": "Laapsi, Chhena kheeri, and Gulab jamun  ",
+            "output": "indian foods"
+        },
+        "57": {
+            "input": "Takeaway, Senorita, and Otro Trago - Remix ",
+            "output": "popular songs"
+        },
+        "58": {
+            "input": " Mumps, Pertussis, and Diphtheria ",
+            "output": "vaccine preventable diseases"
+        },
+        "59": {
+            "input": "Vegetables, maize, and Fibers",
+            "output": "crops"
+        },
+        "60": {
+            "input": " Ledikeni, Chikki, and Poha ",
+            "output": "indian foods"
+        },
+        "61": {
+            "input": "tea, coffee, wine  ",
+            "output": "drinks"
+        },
+        "62": {
+            "input": "Torchic, Butterfree, and Ho-Oh  ",
+            "output": "pokeman"
+        },
+        "63": {
+            "input": "Cats and dogs are common",
+            "output": "pets"
+        },
+        "64": {
+            "input": " Fruits, sugarcane, and rice ",
+            "output": "crops"
+        },
+        "65": {
+            "input": " arsenic, cadmium, and zirconium ",
+            "output": "chemical elements with high density"
+        },
+        "66": {
+            "input": "Jensen's inequality, Leibniz formula for determinants, and Delambre analogies  ",
+            "output": "math theorems"
+        },
+        "67": {
+            "input": "Station Eleven, The 5th Wave, and Snow Crash  ",
+            "output": "science fiction books"
+        },
+        "68": {
+            "input": "water, glass, air ",
+            "output": "transparent"
+        },
+        "69": {
+            "input": "Profitable home Chelisheva, The House with Lions, and House under the steeple",
+            "output": "tourist_attractions"
+        },
+        "70": {
+            "input": "mercury, antimony, and rhodium  ",
+            "output": "chemical elements with high density"
+        },
+        "71": {
+            "input": "  Koshambri, Misi roti, and Alu Pitika ",
+            "output": "indian foods"
+        },
+        "72": {
+            "input": " Reviews of Modern Physics, Ca-A Cancer Journal for Clinicians, and Progress in Polymer Science   ",
+            "output": "top journals"
+        },
+        "73": {
+            "input": "How Do You Sleep?, I Don't Care , and Money In The Grave ",
+            "output": "popular songs"
+        },
+        "74": {
+            "input": "Cvent, Workfront, and Looker  ",
+            "output": "tech companies"
+        },
+        "75": {
+            "input": "The Stand, The Road, and Onyx ",
+            "output": "science fiction books"
+        },
+        "76": {
+            "input": "Chester A. Arthur, James K. Polk, and George H. W. Bush  ",
+            "output": "presidents of the U.S"
+        },
+        "77": {
+            "input": " Arceus, Oshawott, and Dragonite",
+            "output": "pokeman"
+        },
+        "78": {
+            "input": " Dart, Scala, and Abap   ",
+            "output": "programming languages"
+        },
+        "79": {
+            "input": "Andy Lucero, Cody McCaulou, and Dale Maverick Hudson ",
+            "output": "people shot by police"
+        },
+        "80": {
+            "input": " 0.958333333, QUE PRETENDES, and Panini",
+            "output": "popular songs"
+        },
+        "81": {
+            "input": "Visual Basic, Lua, and VBA",
+            "output": "programming languages"
+        },
+        "82": {
+            "input": "Measles, Hepatitis, and Invasive Meningococcal Disease ",
+            "output": "vaccine preventable diseases"
+        },
+        "83": {
+            "input": "Soulless, The Hunger Games, and His Majesty's Dragon",
+            "output": "science fiction books"
+        },
+        "84": {
+            "input": "Red Deer, African Bush Elephant, and Wood Duck",
+            "output": "animals"
+        },
+        "85": {
+            "input": "Pongal, Mohanthal, and Sambar",
+            "output": "indian foods"
+        },
+        "86": {
+            "input": "Lom\u00e9, Ottawa, and Havana ",
+            "output": "capital cities"
+        },
+        "87": {
+            "input": "Earrings, Belts, and Heels",
+            "output": "accessories"
+        },
+        "88": {
+            "input": "New Guinea, Victoria Island, and Honshu",
+            "output": "large islands"
+        },
+        "89": {
+            "input": "  Mali, Algeria, and Zimbabwe ",
+            "output": "African countries"
+        },
+        "90": {
+            "input": "Guitar, piano, and drum ",
+            "output": "musical instruments"
+        },
+        "91": {
+            "input": "Burate, Tolowa, and Kui  ",
+            "output": "extinct languages"
+        },
+        "92": {
+            "input": "Taekwondo, Volleyball, and Judo ",
+            "output": "sports"
+        },
+        "93": {
+            "input": "Square, circle, triangle are different",
+            "output": "shapes"
+        },
+        "94": {
+            "input": " Ada, Groovy, and Swift   ",
+            "output": "programming languages"
+        },
+        "95": {
+            "input": "Alfred Sisley, Sandro Botticelli, and Henri Matisse  ",
+            "output": "artists"
+        },
+        "96": {
+            "input": "Ghost in the Wires: My Adventures as the World's Most Wanted Hacker, Big Data: A Revolution That Will Transform How We Live, Work, and Think, and Our Final Invention: Artificial Intelligence and the End of the Human Era  ",
+            "output": "Computer Science books"
+        },
+        "97": {
+            "input": "oganesson, lead, and cobalt ",
+            "output": "chemical elements with high density"
+        },
+        "98": {
+            "input": "Game Programming Golden Rules, Feynman Lectures On Computation, and Computability and Unsolvability",
+            "output": "Computer Science books"
+        },
+        "99": {
+            "input": "The Gambia, Burkina Faso, and South Africa",
+            "output": "African countries"
+        },
+        "100": {
+            "input": " Namely, Talend, and DiscoverOrg  ",
+            "output": "tech companies"
+        }
+    }
+}

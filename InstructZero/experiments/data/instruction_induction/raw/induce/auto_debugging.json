@@ -1,0 +1,47 @@
+{
+    "metadata": {
+        "num_examples": 10
+    },
+    "examples": {
+        "1": {
+            "input": "```\nd = {1: 'hello', 2: 'bye', 3: 'good morning'}\nstr_ = ''\nfor i in range(len(d)):\n\tif i % 2 == 1:\n\t\tstr_ += d[i]\n```",
+            "output": "hellogood morning"
+        },
+        "2": {
+            "input": "```\nclass MyClass():\n\tdef __init__(self):\n\t\tprint(param)\nx = MyClass(5)\n```",
+            "output": "None"
+        },
+        "3": {
+            "input": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```",
+            "output": "45"
+        },
+        "4": {
+            "input": "```\ny = list(map(int, ['1', 'hello', '2']))\n```",
+            "output": "ValueError: invalid literal for int() with base 10: 'hello'"
+        },
+        "5": {
+            "input": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```",
+            "output": "2550"
+        },
+        "6": {
+            "input": "```\nimport numpy as np\nx = numpy.zeros(10)\n```",
+            "output": "NameError: name 'numpy' is not defined"
+        },
+        "7": {
+            "input": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```",
+            "output": "True"
+        },
+        "8": {
+            "input": "```\nimport numpy\nx = numpy.zeros(10)\nx += 1\n```",
+            "output": "array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])"
+        },
+        "9": {
+            "input": "```\nprint('1' + 2)\n```",
+            "output": "TypeError: must be str, not int"
+        },
+        "10": {
+            "input": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```",
+            "output": "5"
+        }
+    }
+}

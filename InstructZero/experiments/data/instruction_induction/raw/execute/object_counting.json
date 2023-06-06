@@ -1,0 +1,407 @@
+{
+    "metadata": {
+        "num_examples": 100
+    },
+    "examples": {
+        "1": {
+            "input": "I have two mice, a rabbit, two donkeys, a bear, a dog, a snake, a chicken, and a cat.",
+            "output": "10"
+        },
+        "2": {
+            "input": "I have a potato, four lettuce heads, an onion, and a cauliflower.",
+            "output": "7"
+        },
+        "3": {
+            "input": "I have two stoves, a dog, a cat, a snake, a bear, an oven, a duck, a mouse, a chair, a chicken, and a donkey.",
+            "output": "8"
+        },
+        "4": {
+            "input": "I have a mouse, a goat, and two fish.",
+            "output": "4"
+        },
+        "5": {
+            "input": "I have a chair, three couches, and a car.",
+            "output": "5"
+        },
+        "6": {
+            "input": "I have a fridge, three ovens, a chair, a toaster, a table, and a microwave.",
+            "output": "8"
+        },
+        "7": {
+            "input": "I have a nectarine, three strawberries, and an orange.",
+            "output": "5"
+        },
+        "8": {
+            "input": "I have two cabbages, a potato, a carrot, and an onion.",
+            "output": "5"
+        },
+        "9": {
+            "input": "I have a snake, a goat, and a snail.",
+            "output": "3"
+        },
+        "10": {
+            "input": "I have two nectarines, five mice, a fish, a donkey, a duck, three pigs, a blackberry, a rabbit, and two chickens.",
+            "output": "14"
+        },
+        "11": {
+            "input": "I have a dog, a stalk of celery, two heads of broccoli, a mouse, a yam, three cabbages, an onion, two garlics, a cauliflower, a carrot, a lettuce head, and a potato.",
+            "output": "14"
+        },
+        "12": {
+            "input": "I have a violin, three trumpets, a clarinet, a drum, a flute, a piano, an accordion, and a trombone.",
+            "output": "10"
+        },
+        "13": {
+            "input": "I have two stoves, a bed, a table, a microwave, a lamp, three fridges, and two chairs.",
+            "output": "11"
+        },
+        "14": {
+            "input": "I have a fish, and a donkey.",
+            "output": "2"
+        },
+        "15": {
+            "input": "I have a cauliflower, a stalk of celery, a garlic, two onions, two cabbages, two heads of broccoli, a potato, a yam, two lettuce heads, and a carrot.",
+            "output": "14"
+        },
+        "16": {
+            "input": "I have a peach, an apple, a raspberry, a strawberry, five grapes, a blackberry, three bananas, a plum, two oranges, and a nectarine.",
+            "output": "17"
+        },
+        "17": {
+            "input": "I have an oven, a lamp, a car, a table, and a stove.",
+            "output": "5"
+        },
+        "18": {
+            "input": "I have three fish, a cat, three dogs, a bear, a duck, a cow, three mice, a snail, and a rabbit.",
+            "output": "15"
+        },
+        "19": {
+            "input": "I have two cauliflowers, three cabbages, a lettuce head, and a head of broccoli.",
+            "output": "7"
+        },
+        "20": {
+            "input": "I have a couch, a bed, a table, and a stove.",
+            "output": "4"
+        },
+        "21": {
+            "input": "I have a drum, and a flute.",
+            "output": "2"
+        },
+        "22": {
+            "input": "I have two drums, a lettuce head, a cauliflower, a trumpet, and a potato.",
+            "output": "3"
+        },
+        "23": {
+            "input": "I have an onion, a potato, a garlic, a stalk of celery, three yams, a cauliflower, a carrot, two cabbages, a lettuce head, and a head of broccoli.",
+            "output": "13"
+        },
+        "24": {
+            "input": "I have a piano, a violin, a trombone, a garlic, a drum, a clarinet, a flute, and two yams.",
+            "output": "6"
+        },
+        "25": {
+            "input": "I have a chair, two ovens, and three tables.",
+            "output": "6"
+        },
+        "26": {
+            "input": "I have a toaster, a table, a couch, a lamp, and a microwave.",
+            "output": "5"
+        },
+        "27": {
+            "input": "I have a nectarine, an apple, a peach, a blackberry, two oranges, a plum, and a strawberry.",
+            "output": "8"
+        },
+        "28": {
+            "input": "I have three oranges, a banana, an apple, a nectarine, a yam, a strawberry, four lettuce heads, and a carrot.",
+            "output": "7"
+        },
+        "29": {
+            "input": "I have two oranges, an apple, a peach, a plum, a grape, a blackberry, two raspberries, and a banana.",
+            "output": "10"
+        },
+        "30": {
+            "input": "I have a clarinet, a drum, two trombones, an accordion, a flute, and three trumpets.",
+            "output": "9"
+        },
+        "31": {
+            "input": "I have a raspberry, three clarinets, an apple, a nectarine, four oranges, a flute, a peach, and an accordion.",
+            "output": "8"
+        },
+        "32": {
+            "input": "I have three chairs, a fridge, a stove, a toaster, and a bed.",
+            "output": "7"
+        },
+        "33": {
+            "input": "I have a piano, a violin, two accordions, three drums, and a flute.",
+            "output": "8"
+        },
+        "34": {
+            "input": "I have a microwave, a fridge, and a bed.",
+            "output": "3"
+        },
+        "35": {
+            "input": "I have an oven, a lamp, four beds, three stoves, a microwave, a car, and a couch.",
+            "output": "12"
+        },
+        "36": {
+            "input": "I have a trumpet, a violin, a trombone, a raspberry, a flute, and an apple.",
+            "output": "4"
+        },
+        "37": {
+            "input": "I have a bed, a lamp, two microwaves, a fridge, two toasters, a stove, a table, a car, and three ovens.",
+            "output": "13"
+        },
+        "38": {
+            "input": "I have a stalk of celery, and a potato.",
+            "output": "2"
+        },
+        "39": {
+            "input": "I have a fridge, a cauliflower, a stove, and a potato.",
+            "output": "2"
+        },
+        "40": {
+            "input": "I have three tables, a couch, a microwave, a fridge, a toaster, a chair, a lamp, and a bed.",
+            "output": "10"
+        },
+        "41": {
+            "input": "I have a car, a bed, three chairs, a microwave, two stoves, and a fridge.",
+            "output": "9"
+        },
+        "42": {
+            "input": "I have a donkey, a frog, and two mice.",
+            "output": "4"
+        },
+        "43": {
+            "input": "I have three lettuce heads, and a stalk of celery.",
+            "output": "4"
+        },
+        "44": {
+            "input": "I have a stove, an oven, a chair, a car, a microwave, a toaster, a fridge, two couches, and a table.",
+            "output": "10"
+        },
+        "45": {
+            "input": "I have a mouse, and a bear.",
+            "output": "2"
+        },
+        "46": {
+            "input": "I have a microwave, a chair, a lamp, a toaster, two ovens, a table, a bed, two stoves, and a fridge.",
+            "output": "11"
+        },
+        "47": {
+            "input": "I have a banana, a peach, and a nectarine.",
+            "output": "3"
+        },
+        "48": {
+            "input": "I have a garlic, a potato, a trombone, a yam, a lettuce head, a drum, a head of broccoli, a flute, a stalk of celery, a cauliflower, and a cabbage.",
+            "output": "8"
+        },
+        "49": {
+            "input": "I have three blackberries, a raspberry, a peach, a strawberry, an orange, and a plum.",
+            "output": "8"
+        },
+        "50": {
+            "input": "I have two pigs, and a snail.",
+            "output": "3"
+        },
+        "51": {
+            "input": "I have an oven, a fridge, a stove, a car, two chairs, a couch, a bed, a toaster, and a microwave.",
+            "output": "10"
+        },
+        "52": {
+            "input": "I have a table, a lamp, an oven, a toaster, a car, a bed, two microwaves, a couch, and three stoves.",
+            "output": "12"
+        },
+        "53": {
+            "input": "I have a blackberry, a strawberry, a banana, a plum, two grapes, three peaches, a nectarine, an apple, an orange, and two raspberries.",
+            "output": "14"
+        },
+        "54": {
+            "input": "I have a couch, two microwaves, an oven, a toaster, a fridge, a table, two beds, and a car.",
+            "output": "10"
+        },
+        "55": {
+            "input": "I have a banana, a plum, a strawberry, a nectarine, an apple, a raspberry, an orange, a peach, a grape, and a blackberry.",
+            "output": "10"
+        },
+        "56": {
+            "input": "I have three microwaves, and a car.",
+            "output": "4"
+        },
+        "57": {
+            "input": "I have a toaster, a couch, a table, a stove, and a chair.",
+            "output": "5"
+        },
+        "58": {
+            "input": "I have a banana, a plum, a chair, an oven, a strawberry, a peach, a raspberry, and a nectarine.",
+            "output": "6"
+        },
+        "59": {
+            "input": "I have a head of broccoli, a potato, a lettuce head, and a garlic.",
+            "output": "4"
+        },
+        "60": {
+            "input": "I have two cauliflowers, an onion, and a head of broccoli.",
+            "output": "4"
+        },
+        "61": {
+            "input": "I have an apple, and a strawberry.",
+            "output": "2"
+        },
+        "62": {
+            "input": "I have a yam, a stalk of celery, an onion, three carrots, two lettuce heads, a cabbage, a garlic, a potato, a head of broccoli, and two cauliflowers.",
+            "output": "14"
+        },
+        "63": {
+            "input": "I have a lettuce head, a potato, a cabbage, an onion, a yam, a head of broccoli, a microwave, and a toaster.",
+            "output": "6"
+        },
+        "64": {
+            "input": "I have a cat, a frog, a bear, three chickens, three rabbits, a goat, a cow, three snakes, a dog, and a snail.",
+            "output": "16"
+        },
+        "65": {
+            "input": "I have a toaster, a lamp, a fridge, an oven, three tables, a car, a bed, a stove, and a couch.",
+            "output": "11"
+        },
+        "66": {
+            "input": "I have a trombone, an accordion, a clarinet, a drum, a flute, a trumpet, a piano, and a violin.",
+            "output": "8"
+        },
+        "67": {
+            "input": "I have a raspberry, three blackberries, a nectarine, a grape, a strawberry, an apple, a peach, and an orange.",
+            "output": "10"
+        },
+        "68": {
+            "input": "I have a toaster, an oven, a microwave, and two stoves.",
+            "output": "5"
+        },
+        "69": {
+            "input": "I have a drum, a flute, a clarinet, a violin, four accordions, a piano, a trombone, and a trumpet.",
+            "output": "11"
+        },
+        "70": {
+            "input": "I have a head of broccoli, a potato, a garlic, four cauliflowers, and a yam.",
+            "output": "8"
+        },
+        "71": {
+            "input": "I have a flute, three accordions, a piano, three violins, a drum, and a trumpet.",
+            "output": "10"
+        },
+        "72": {
+            "input": "I have a snail, a fish, a mouse, two cows, and a cat.",
+            "output": "6"
+        },
+        "73": {
+            "input": "I have a cauliflower, and two heads of broccoli.",
+            "output": "3"
+        },
+        "74": {
+            "input": "I have a nectarine, a banana, a raspberry, a plum, and an orange.",
+            "output": "5"
+        },
+        "75": {
+            "input": "I have a rabbit, a goat, a pig, and two cows.",
+            "output": "5"
+        },
+        "76": {
+            "input": "I have a banana, a nectarine, four apples, a plum, a blackberry, a strawberry, a grape, a peach, and a raspberry.",
+            "output": "12"
+        },
+        "77": {
+            "input": "I have a stalk of celery, two cauliflowers, a head of broccoli, a carrot, a cabbage, a lettuce head, and three onions.",
+            "output": "10"
+        },
+        "78": {
+            "input": "I have a rabbit, a donkey, a dog, a duck, and a fish.",
+            "output": "5"
+        },
+        "79": {
+            "input": "I have a head of broccoli, two potatoes, and a cauliflower.",
+            "output": "4"
+        },
+        "80": {
+            "input": "I have a goat, two couches, five rabbits, three cows, a bed, a stove, and a frog.",
+            "output": "10"
+        },
+        "81": {
+            "input": "I have a fish, a snake, a strawberry, two cats, a blackberry, a mouse, and a banana.",
+            "output": "5"
+        },
+        "82": {
+            "input": "I have a trombone, a piano, a violin, a drum, a trumpet, a clarinet, a flute, and an accordion.",
+            "output": "8"
+        },
+        "83": {
+            "input": "I have three oranges, a peach, a banana, a grape, a blackberry, and an apple.",
+            "output": "8"
+        },
+        "84": {
+            "input": "I have a bear, a dog, and a donkey.",
+            "output": "3"
+        },
+        "85": {
+            "input": "I have a table, three chairs, an oven, two toasters, a microwave, and a bed.",
+            "output": "9"
+        },
+        "86": {
+            "input": "I have a chair, a car, a bed, a toaster, two ovens, a microwave, a table, a couch, and a stove.",
+            "output": "10"
+        },
+        "87": {
+            "input": "I have a trumpet, a trombone, a piano, a drum, a violin, three clarinets, an accordion, and two flutes.",
+            "output": "11"
+        },
+        "88": {
+            "input": "I have a strawberry, a raspberry, a blackberry, a grape, three apples, and a nectarine.",
+            "output": "8"
+        },
+        "89": {
+            "input": "I have a stove, a table, two chairs, a toaster, a microwave, a couch, an oven, and a fridge.",
+            "output": "9"
+        },
+        "90": {
+            "input": "I have two trumpets, and a violin.",
+            "output": "3"
+        },
+        "91": {
+            "input": "I have a couch, and a car.",
+            "output": "2"
+        },
+        "92": {
+            "input": "I have two fish, a goat, a donkey, a mouse, a bear, a cat, a pig, a chicken, and a cow.",
+            "output": "10"
+        },
+        "93": {
+            "input": "I have a banana, a raspberry, an apple, a grape, a nectarine, a peach, a blackberry, an orange, a plum, and a strawberry.",
+            "output": "10"
+        },
+        "94": {
+            "input": "I have a head of broccoli, a cauliflower, a cabbage, a table, and a fridge.",
+            "output": "3"
+        },
+        "95": {
+            "input": "I have an orange, an apple, and three grapes.",
+            "output": "5"
+        },
+        "96": {
+            "input": "I have a head of broccoli, two peaches, two stalks of celery, a cauliflower, a grape, a nectarine, and a banana.",
+            "output": "5"
+        },
+        "97": {
+            "input": "I have a duck, two stalks of celery, a mouse, three cauliflowers, a dog, a cat, a pig, four bears, a fish, a donkey, a yam, a snail, and four goats.",
+            "output": "16"
+        },
+        "98": {
+            "input": "I have two blackberries, a strawberry, a nectarine, a grape, an apple, a plum, four peaches, a raspberry, two bananas, two oranges, a chair, and a car.",
+            "output": "16"
+        },
+        "99": {
+            "input": "I have an accordion, a clarinet, a peach, a trumpet, a piano, three oranges, a blackberry, a drum, a flute, and a violin.",
+            "output": "7"
+        },
+        "100": {
+            "input": "I have a garlic, a yam, and two onions.",
+            "output": "4"
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "num_examples": 19
+    },
+    "examples": {
+        "1": {
+            "input": "listen, study, tell, happy, watch  ",
+            "output": "happy"
+        },
+        "2": {
+            "input": "mes, Iowa, Des Moines, Story County, machine learning  ",
+            "output": "machine learning"
+        },
+        "3": {
+            "input": "ntist, doctor, postman, hospital, cashier  ",
+            "output": "hospital"
+        },
+        "4": {
+            "input": "Monday, spring, summer, winter, fall  ",
+            "output": "Monday"
+        },
+        "5": {
+            "input": "Dublin, France, Tokyo, Athens, Paris, San Francisco  ",
+            "output": "France"
+        },
+        "6": {
+            "input": "Michael Jordan, machine learning, basketball, baseball, black  ",
+            "output": "machine learning"
+        },
+        "7": {
+            "input": "bread, bakery, butcher's, market  ",
+            "output": "bread"
+        },
+        "8": {
+            "input": "angle, circle, book, triangle, heptagon, tetrahedron  ",
+            "output": "book"
+        },
+        "9": {
+            "input": "appetizer, plumber, teacher, waiter, painter  ",
+            "output": "appetizer"
+        },
+        "10": {
+            "input": "ala, bear, white, zebra, kangaroo, horse  ",
+            "output": "white"
+        },
+        "11": {
+            "input": "pencil, eraser, baby, ruler, notebook  ",
+            "output": "baby"
+        },
+        "12": {
+            "input": "n, boy, or, under  ",
+            "output": "boy"
+        },
+        "13": {
+            "input": "bus, van, car, fly  ",
+            "output": "fly"
+        },
+        "14": {
+            "input": "shrimp, whale, tiger, eel, shark  ",
+            "output": "tiger"
+        },
+        "15": {
+            "input": "John, Tom, Mark, Mary  ",
+            "output": "Mary"
+        },
+        "16": {
+            "input": "glass, head, arm, leg, hand, foot  ",
+            "output": "glass"
+        },
+        "17": {
+            "input": "Europe, Greece, Italy, Germany, Spain  ",
+            "output": "Europe"
+        },
+        "18": {
+            "input": "able, pen, armchair, wardrobe  ",
+            "output": "pen"
+        },
+        "19": {
+            "input": "ain, cream, airplane, helicopter, ship  ",
+            "output": "cream"
+        }
+    }
+}

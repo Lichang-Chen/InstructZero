@@ -1,0 +1,407 @@
+{
+    "metadata": {
+        "num_examples": 100
+    },
+    "examples": {
+        "1": {
+            "input": "atornco",
+            "output": "cartoon"
+        },
+        "2": {
+            "input": "pictloa",
+            "output": "optical"
+        },
+        "3": {
+            "input": "morefr",
+            "output": "former"
+        },
+        "4": {
+            "input": "tllongniwe",
+            "output": "wellington"
+        },
+        "5": {
+            "input": "shesc",
+            "output": "chess"
+        },
+        "6": {
+            "input": "wieevd",
+            "output": "viewed"
+        },
+        "7": {
+            "input": "nesl",
+            "output": "lens"
+        },
+        "8": {
+            "input": "libeb",
+            "output": "bible"
+        },
+        "9": {
+            "input": "ecedjtre",
+            "output": "rejected"
+        },
+        "10": {
+            "input": "oolb",
+            "output": "bool"
+        },
+        "11": {
+            "input": "gssu",
+            "output": "usgs"
+        },
+        "12": {
+            "input": "moesp",
+            "output": "poems"
+        },
+        "13": {
+            "input": "atx",
+            "output": "tax"
+        },
+        "14": {
+            "input": "sesevl",
+            "output": "vessel"
+        },
+        "15": {
+            "input": "gdee",
+            "output": "edge"
+        },
+        "16": {
+            "input": "druec",
+            "output": "crude"
+        },
+        "17": {
+            "input": "eleftrc",
+            "output": "reflect"
+        },
+        "18": {
+            "input": "iiregflnspd",
+            "output": "springfield"
+        },
+        "19": {
+            "input": "arpt",
+            "output": "part"
+        },
+        "20": {
+            "input": "utstibordir",
+            "output": "distributor"
+        },
+        "21": {
+            "input": "lepyr",
+            "output": "reply"
+        },
+        "22": {
+            "input": "thsongniwa",
+            "output": "washington"
+        },
+        "23": {
+            "input": "aredgdre",
+            "output": "regarded"
+        },
+        "24": {
+            "input": "cobtroe",
+            "output": "october"
+        },
+        "25": {
+            "input": "qniuue",
+            "output": "unique"
+        },
+        "26": {
+            "input": "aets",
+            "output": "east"
+        },
+        "27": {
+            "input": "nkiss",
+            "output": "skins"
+        },
+        "28": {
+            "input": "ganerr",
+            "output": "ranger"
+        },
+        "29": {
+            "input": "onw",
+            "output": "now"
+        },
+        "30": {
+            "input": "ecedftaf",
+            "output": "affected"
+        },
+        "31": {
+            "input": "ffngaist",
+            "output": "staffing"
+        },
+        "32": {
+            "input": "agitcrest",
+            "output": "strategic"
+        },
+        "33": {
+            "input": "ieensg",
+            "output": "seeing"
+        },
+        "34": {
+            "input": "isanktpa",
+            "output": "pakistan"
+        },
+        "35": {
+            "input": "gtreidsrca",
+            "output": "cartridges"
+        },
+        "36": {
+            "input": "eichevl",
+            "output": "vehicle"
+        },
+        "37": {
+            "input": "lalys",
+            "output": "sally"
+        },
+        "38": {
+            "input": "tageetsrci",
+            "output": "cigarettes"
+        },
+        "39": {
+            "input": "enesvure",
+            "output": "revenues"
+        },
+        "40": {
+            "input": "epmnemtlco",
+            "output": "complement"
+        },
+        "41": {
+            "input": "vlieo",
+            "output": "olive"
+        },
+        "42": {
+            "input": "miniganex",
+            "output": "examining"
+        },
+        "43": {
+            "input": "cackkabtr",
+            "output": "trackback"
+        },
+        "44": {
+            "input": "ieedlvbe",
+            "output": "believed"
+        },
+        "45": {
+            "input": "ocygolyhps",
+            "output": "psychology"
+        },
+        "46": {
+            "input": "weedsran",
+            "output": "answered"
+        },
+        "47": {
+            "input": "ulusbofa",
+            "output": "fabulous"
+        },
+        "48": {
+            "input": "rnarfeestrd",
+            "output": "transferred"
+        },
+        "49": {
+            "input": "aeld",
+            "output": "lead"
+        },
+        "50": {
+            "input": "renyh",
+            "output": "henry"
+        },
+        "51": {
+            "input": "nuej",
+            "output": "june"
+        },
+        "52": {
+            "input": "poedmsco",
+            "output": "composed"
+        },
+        "53": {
+            "input": "enummtmo",
+            "output": "momentum"
+        },
+        "54": {
+            "input": "sunest",
+            "output": "sunset"
+        },
+        "55": {
+            "input": "aitplco",
+            "output": "optical"
+        },
+        "56": {
+            "input": "mialrnte",
+            "output": "terminal"
+        },
+        "57": {
+            "input": "aemrrk",
+            "output": "marker"
+        },
+        "58": {
+            "input": "nocdmeemred",
+            "output": "recommended"
+        },
+        "59": {
+            "input": "eelzanuve",
+            "output": "venezuela"
+        },
+        "60": {
+            "input": "nblteiapr",
+            "output": "printable"
+        },
+        "61": {
+            "input": "btanyiisitasul",
+            "output": "sustainability"
+        },
+        "62": {
+            "input": "mraedel",
+            "output": "emerald"
+        },
+        "63": {
+            "input": "rareyctse",
+            "output": "secretary"
+        },
+        "64": {
+            "input": "cuiqear",
+            "output": "acquire"
+        },
+        "65": {
+            "input": "iatnlo",
+            "output": "latino"
+        },
+        "66": {
+            "input": "ootsf",
+            "output": "fotos"
+        },
+        "67": {
+            "input": "pniinoo",
+            "output": "opinion"
+        },
+        "68": {
+            "input": "iyccebl",
+            "output": "bicycle"
+        },
+        "69": {
+            "input": "nadlswodo",
+            "output": "downloads"
+        },
+        "70": {
+            "input": "dosm",
+            "output": "mods"
+        },
+        "71": {
+            "input": "lsrinatopey",
+            "output": "personality"
+        },
+        "72": {
+            "input": "bumami",
+            "output": "mumbai"
+        },
+        "73": {
+            "input": "irazebt",
+            "output": "bizrate"
+        },
+        "74": {
+            "input": "lheidbspu",
+            "output": "published"
+        },
+        "75": {
+            "input": "louss",
+            "output": "souls"
+        },
+        "76": {
+            "input": "eixdf",
+            "output": "fixed"
+        },
+        "77": {
+            "input": "arptcieeapd",
+            "output": "appreciated"
+        },
+        "78": {
+            "input": "jainnmbe",
+            "output": "benjamin"
+        },
+        "79": {
+            "input": "liet",
+            "output": "lite"
+        },
+        "80": {
+            "input": "tnli",
+            "output": "intl"
+        },
+        "81": {
+            "input": "csntruetcod",
+            "output": "constructed"
+        },
+        "82": {
+            "input": "disvdae",
+            "output": "advised"
+        },
+        "83": {
+            "input": "teahh",
+            "output": "heath"
+        },
+        "84": {
+            "input": "vriedn",
+            "output": "driven"
+        },
+        "85": {
+            "input": "oeynbd",
+            "output": "beyond"
+        },
+        "86": {
+            "input": "ncesahbr",
+            "output": "branches"
+        },
+        "87": {
+            "input": "esnnstcicoy",
+            "output": "consistency"
+        },
+        "88": {
+            "input": "esstas",
+            "output": "assets"
+        },
+        "89": {
+            "input": "tarlpy",
+            "output": "partly"
+        },
+        "90": {
+            "input": "oltesuab",
+            "output": "absolute"
+        },
+        "91": {
+            "input": "usiteod",
+            "output": "outside"
+        },
+        "92": {
+            "input": "uonsb",
+            "output": "bonus"
+        },
+        "93": {
+            "input": "tatw",
+            "output": "watt"
+        },
+        "94": {
+            "input": "sakt",
+            "output": "task"
+        },
+        "95": {
+            "input": "oniigjn",
+            "output": "joining"
+        },
+        "96": {
+            "input": "veayh",
+            "output": "heavy"
+        },
+        "97": {
+            "input": "ibtshiex",
+            "output": "exhibits"
+        },
+        "98": {
+            "input": "mmteoaro",
+            "output": "roommate"
+        },
+        "99": {
+            "input": "texenl",
+            "output": "nextel"
+        },
+        "100": {
+            "input": "averths",
+            "output": "harvest"
+        }
+    }
+}

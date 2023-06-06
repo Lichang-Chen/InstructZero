@@ -1,0 +1,659 @@
+{
+    "metadata": {
+        "num_examples": 163
+    },
+    "examples": {
+        "1": {
+            "input": "Nigeria, Russia, and Egypt",
+            "output": "countries with large population"
+        },
+        "2": {
+            "input": "Domoic Acid Poisoning, Spotted Fever Rickettsiosis, and Brucellosis",
+            "output": "infectious diseases"
+        },
+        "3": {
+            "input": "The London, China, and bad guy",
+            "output": "popular songs"
+        },
+        "4": {
+            "input": "Sports Shoes, Shorts, and Sweaters",
+            "output": "Apparel"
+        },
+        "5": {
+            "input": "Chimchar, Treecko, and Victini",
+            "output": "pokeman"
+        },
+        "6": {
+            "input": "DUTCH WAR, CRIMEAN WAR, and WAR OF THE FIRST COALITION",
+            "output": "historical wars"
+        },
+        "7": {
+            "input": "Ronald Reagan, Dwight D. Eisenhower, and Richard Nixon",
+            "output": "presidents of the U.S"
+        },
+        "8": {
+            "input": "Nature Reviews Genetics, MMWR Recommendations and Reports, and Nature Reviews Disease Primers",
+            "output": "top journals"
+        },
+        "9": {
+            "input": "A History, a Theory, a Flood, How Google Works, and The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography",
+            "output": "Computer Science books"
+        },
+        "10": {
+            "input": "Amazon, Apple, Facebook, Google, and Microsoft",
+            "output": "Big Tech"
+        },
+        "11": {
+            "input": "Vera'a, Maniwaki Algonquin, and Swoeng",
+            "output": "extinct languages"
+        },
+        "12": {
+            "input": "Objective-C, PHP, and Haskell",
+            "output": "programming languages"
+        },
+        "13": {
+            "input": "Louis C. Miller, Ronnie Lee Shorter, and Brent Pickard",
+            "output": "people shot by police"
+        },
+        "14": {
+            "input": "Botulism, Foodborne, Campylobacteriosis, and Lyme Disease",
+            "output": "infectious diseases"
+        },
+        "15": {
+            "input": "Franklin Pierce, Abraham Lincoln, and William McKinley  ",
+            "output": "presidents of the U.S"
+        },
+        "16": {
+            "input": "Jeans, Tops, and Suits",
+            "output": "Apparel"
+        },
+        "17": {
+            "input": "Jan van Eyck, Marc Chagall, and Edgar Degas",
+            "output": "artists"
+        },
+        "18": {
+            "input": " Australia, United States of America, People's Republic of China, and Russia",
+            "output": "countries in United Nations"
+        },
+        "19": {
+            "input": "Computer Coding, Sync: The Emerging Science of Spontaneous Order, and The Hidden Connections: A Science for Sustainable Living ",
+            "output": "Computer Science books"
+        },
+        "20": {
+            "input": "Rust, TypeScript, and C/C++",
+            "output": "programming languages"
+        },
+        "21": {
+            "input": "Squirrel Glider, Bighorn Sheep, and Bush Dog",
+            "output": "animals"
+        },
+        "22": {
+            "input": "How Great Leaders Inspire Everyone to Take Action, Superintelligence: Paths, Dangers, Strategies, and The Meme Machine",
+            "output": "Computer Science books"
+        },
+        "23": {
+            "input": "Michael Perez, Akinyia Malik Jerome Gray, and Joshua M. Gomoll  ",
+            "output": "people shot by police"
+        },
+        "24": {
+            "input": "Python, Cobol, and C#",
+            "output": "programming languages"
+        },
+        "25": {
+            "input": "  Mikhail Vrubel, Rene Magritte, and Amedeo Modigliani  ",
+            "output": "artists"
+        },
+        "26": {
+            "input": "LATIN AMERICAN WARS OF INDEPENDENCE, AUSTRO-TURKISH WAR, and AMERICAN CIVIL WAR",
+            "output": "historical wars"
+        },
+        "27": {
+            "input": "Hurricanes, floods, and earthquakes",
+            "output": "natural disasters"
+        },
+        "28": {
+            "input": "Oilseeds, Pulses, and jute",
+            "output": "crops"
+        },
+        "29": {
+            "input": " Kotlin, Java, and Matlab",
+            "output": "programming languages"
+        },
+        "30": {
+            "input": "Signalno- watchtower in the village of Muni, Museum 'Old Sarepta'. House unmarried sisters",
+            "output": "tourist_attractions"
+        },
+        "31": {
+            "input": "water, ethanol, acetone, and methanol",
+            "output": "solvant"
+        },
+        "32": {
+            "input": "Ribosomes, plasmid, cell wall, and plasma membrane",
+            "output": "prokaryotic cells"
+        },
+        "33": {
+            "input": "Trousers, Innerwear Vests, and Rain Jacket",
+            "output": "Apparel"
+        },
+        "34": {
+            "input": "DataStax, SocialBakers, and Coveo",
+            "output": "tech companies"
+        },
+        "35": {
+            "input": "SmartSheet, Madwire, and iCIMS",
+            "output": "tech companies"
+        },
+        "36": {
+            "input": "influential, significant, essential, important",
+            "output": "synonyms"
+        },
+        "37": {
+            "input": "Carnegie Mellon Univerity, University of California, Berkeley, and Massachusetts Institute of Technology",
+            "output": "technology Universities"
+        },
+        "38": {
+            "input": "Khampti, Bonerif, and Polci cluster",
+            "output": "extinct languages"
+        },
+        "39": {
+            "input": "Wildlife Park 2 - Crazy Zoo, Glorkian Warrior The Trials Of Glork, and Software Inc. ",
+            "output": "games on Steam"
+        },
+        "40": {
+            "input": "Orange and watermelon",
+            "output": "fruits"
+        },
+        "41": {
+            "input": "Philippines, Brazil, and India  ",
+            "output": "countries with large population"
+        },
+        "42": {
+            "input": "Piece Of Your Heart, Goodbyes (Feat. Young Thug), and Dance Monkey  ",
+            "output": "popular songs"
+        },
+        "43": {
+            "input": "Liouville's theorem, Pu's inequality, and Picard\u2013Lindel\u00f6f theorem  ",
+            "output": "math theorems"
+        },
+        "44": {
+            "input": "Beautiful People (feat. Khalid), Soltera - Remix, and If I Can't Have You",
+            "output": "popular songs"
+        },
+        "45": {
+            "input": " Tanzania, Rwanda, and Malawi?",
+            "output": "African countries"
+        },
+        "46": {
+            "input": "Ancillary Justice, Obsidian, and All Systems Red",
+            "output": "science fiction books"
+        },
+        "47": {
+            "input": "  Kabard-Cherkes, Kwadi, and Osage",
+            "output": "extinct languages"
+        },
+        "48": {
+            "input": "Indonesia, Ethiopia, and Bangladesh",
+            "output": "countries with large population"
+        },
+        "49": {
+            "input": "Culina, Wotapuri-Katarqalai, and Bashkardi",
+            "output": "extinct languages"
+        },
+        "50": {
+            "input": "Rembrandt, Diego Rivera, and Vincent van Gogh",
+            "output": "artists"
+        },
+        "51": {
+            "input": "POLISH-TURKISH WAR, ENGLISH CIVIL WAR, and WAR OF THE AUSTRIAN SUCCESSION",
+            "output": "historical wars"
+        },
+        "52": {
+            "input": "lettuce, cucumber, Bread, butter, and tomato",
+            "output": "ingredient of sandwich"
+        },
+        "53": {
+            "input": "AUSTRO-ITALIAN WAR, JACOBITE REBELLION, and FRANCO-SPANISH WAR",
+            "output": "historical wars"
+        },
+        "54": {
+            "input": "International Business Times UK, Indie Wire, and TechCrunch",
+            "output": "the media"
+        },
+        "55": {
+            "input": "xml, s1, and fti",
+            "output": "computer file format extensions"
+        },
+        "56": {
+            "input": "Afro-Eurasia, Americas, and North America",
+            "output": "continents"
+        },
+        "57": {
+            "input": "Bulbasaur, Pelipper, and Snivy",
+            "output": "pokeman"
+        },
+        "58": {
+            "input": "Kyle Zahacefski, Linus F. Phillip, and Joe Charboneau",
+            "output": "people shot by police"
+        },
+        "59": {
+            "input": "Ethiopia, Nigeria, and Mauritania",
+            "output": "African countries"
+        },
+        "60": {
+            "input": "Golf, Wrestling Freestyle, and Marathon swimming  ",
+            "output": "sports"
+        },
+        "61": {
+            "input": "Turtwig, Seel, and Drifloon  ",
+            "output": "pokeman"
+        },
+        "62": {
+            "input": "  South Sudan, Sierra Leone, and Liberia ",
+            "output": "African countries"
+        },
+        "63": {
+            "input": " Togo, Eritrea, and Burundi   ",
+            "output": "African countries"
+        },
+        "64": {
+            "input": "Coarse Cereals, cotton, and wheat  ",
+            "output": "crops"
+        },
+        "65": {
+            "input": "Asia, Africa, the Americans, Antarctica are considered to be",
+            "output": "continents"
+        },
+        "66": {
+            "input": "Government of Ontario News, WMTV, and La Crosse Tribune ",
+            "output": "the media"
+        },
+        "67": {
+            "input": "Lena River, Nile, and Yellow River  ",
+            "output": "long rivers"
+        },
+        "68": {
+            "input": "  TechNewsWorld, CAPA - Centre for Aviation, and Fairfield Daily Republic ",
+            "output": "the media"
+        },
+        "69": {
+            "input": "Adventures in Minecraft, The Innovators: How a Group of Hackers, Geniuses and Geeks Created the Digital Revolution, and The Quark and the Jaguar: Adventures in the Simple and the Complex  ",
+            "output": "Computer Science books"
+        },
+        "70": {
+            "input": "Sheera, Bajri no rotlo, and Unni Appam  ",
+            "output": "indian foods"
+        },
+        "71": {
+            "input": "  Sailing, Fencing, and Roque ",
+            "output": "sports"
+        },
+        "72": {
+            "input": "Lenca, Tetserret, and Afitti  ",
+            "output": "extinct languages"
+        },
+        "73": {
+            "input": "Yale University, University of Hawaii, Dartmouth College, and Bowdoin College  ",
+            "output": "American universities founded before the states they reside in were created"
+        },
+        "74": {
+            "input": "Hamlet, Romeo and Juliet, Othello ",
+            "output": "works of William Shakespeare"
+        },
+        "75": {
+            "input": "drw, farconfig, and vdproj  ",
+            "output": "computer file format extensions"
+        },
+        "76": {
+            "input": "Florencio Lucero, Javier Lopez Garcia, and Santiago Calderon  ",
+            "output": "people shot by police"
+        },
+        "77": {
+            "input": "Kinshasa, Aden, and Bern  ",
+            "output": "capital cities"
+        },
+        "78": {
+            "input": "Inca Tern, Nile Crocodile, and Lion-Tailed Macaque  ",
+            "output": "animals"
+        },
+        "79": {
+            "input": "Tameka LaShay Simpson, Leslie Sapp III, and Edward Manning  ",
+            "output": "people shot by police"
+        },
+        "80": {
+            "input": " Responsive Web Design Overview For Beginners, Coding Games in Scratch, and The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World   ",
+            "output": "Computer Science books"
+        },
+        "81": {
+            "input": " Physics Reports, Advanced Materials, and The Lancet Oncology ",
+            "output": "top journals"
+        },
+        "82": {
+            "input": "Rutherford B. Hayes, William Henry Harrison, and James A. Garfield  ",
+            "output": "presidents of the U.S"
+        },
+        "83": {
+            "input": "nsr, tdi, and xml  ",
+            "output": "computer file format extensions"
+        },
+        "84": {
+            "input": "  Cape Town, Apia, and Conakry ",
+            "output": "capital cities"
+        },
+        "85": {
+            "input": " Amazon, Mainschleife bei Volkach, and Darband River (Maqsud Beyk River)",
+            "output": "long rivers"
+        },
+        "86": {
+            "input": " Sandals, Ties, and Bracelet ",
+            "output": "accessories"
+        },
+        "87": {
+            "input": "Wald's equation, Fermat's little theorem, and Clausius theorem  ",
+            "output": "math theorems"
+        },
+        "88": {
+            "input": "Kingpin: How One Hacker Took Over the Billion-Dollar Cybercrime Underground, Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy, and Expert C Programming: Deep C Secrets  ",
+            "output": "Computer Science books"
+        },
+        "89": {
+            "input": "Islam, Judaism, and Buddhist ",
+            "output": "religions"
+        },
+        "90": {
+            "input": " Charles M. Smith, Kevin Higgins, and Brandon Simmons   ",
+            "output": "people shot by police"
+        },
+        "91": {
+            "input": " John Adams, Millard Fillmore, and Grover Cleveland   ",
+            "output": "presidents of the U.S"
+        },
+        "92": {
+            "input": "Europe, Australia, and South America ",
+            "output": "continents"
+        },
+        "93": {
+            "input": "Marie Curie, Albert Einstein, Mo Yan, Michael Houghton have all won",
+            "output": "the Nobel Prize"
+        },
+        "94": {
+            "input": " E. coli O157, Cyclosporiasis, and Relapsing Fever   ",
+            "output": "infectious diseases"
+        },
+        "95": {
+            "input": "Democratic Republic of the Congo, Guinea-Bissau, and Djibouti ",
+            "output": "African countries"
+        },
+        "96": {
+            "input": " Chimila, Mehri, and Southeastern Tarahumara ",
+            "output": "extinct languages"
+        },
+        "97": {
+            "input": "  Giotto di Bondone, Caravaggio, and Peter Paul Rubens ",
+            "output": "artists"
+        },
+        "98": {
+            "input": " Libya, S\u00e3o Tom\u00e9 and Pr\u00edncipe, and Lesotho   ",
+            "output": "African countries"
+        },
+        "99": {
+            "input": "Azuchi-Momoyama period, Edo period, and Reiwa period ",
+            "output": "periods of Japanese history"
+        },
+        "100": {
+            "input": "ZX Spectrum Games Code Club: Twenty fun games to code and learn, How to Create a Mind: The Secret of Human Thought Revealed, and The Elements of Style  ",
+            "output": "Computer Science books"
+        },
+        "101": {
+            "input": "  Andrew Johnson, Zachary Taylor, and Grover Cleveland (2nd term) ",
+            "output": "presidents of the U.S"
+        },
+        "102": {
+            "input": "WhoWhatWhy / RealNewsProject (blog), Today.com, and Rockford Register Star",
+            "output": "the media"
+        },
+        "103": {
+            "input": "EverQuest II, Ikaruga, and State of Decay  ",
+            "output": "games on Steam"
+        },
+        "104": {
+            "input": "  Con Calma, 7 rings, and Truth Hurts ",
+            "output": "popular songs"
+        },
+        "105": {
+            "input": "Waistcoat, Dresses, and Track Pants  ",
+            "output": "Apparel"
+        },
+        "106": {
+            "input": " Botswana, Cameroon, and Ivory Coast   ",
+            "output": "African countries"
+        },
+        "107": {
+            "input": "  Signal and a watchtower in the village of Ali-Kuli, triumphal Arch, and Water tower with a chimney ",
+            "output": "tourist_attractions"
+        },
+        "108": {
+            "input": " Charizard, Lugia, and Piplup   ",
+            "output": "pokeman"
+        },
+        "109": {
+            "input": " Tony Hawk's Pro Skater HD, ROSE Online, and Betrayer   ",
+            "output": "games on Steam"
+        },
+        "110": {
+            "input": "Calvin Smith, William Slyter, and Eduardo Hernandez  ",
+            "output": "people shot by police"
+        },
+        "111": {
+            "input": "The Caves of Steel, The Amber Spyglass, and Leviathan Wakes  ",
+            "output": "science fiction books"
+        },
+        "112": {
+            "input": "  James Bauduy, Patrick Bryant, and Elman Jerald Roberts ",
+            "output": "people shot by police"
+        },
+        "113": {
+            "input": " pdq, vpm, and hcxs ",
+            "output": "computer file format extensions"
+        },
+        "114": {
+            "input": "Benin, Zambia, and Mauritius ",
+            "output": "African countries"
+        },
+        "115": {
+            "input": "svcinfo, dpr, and ses  ",
+            "output": "computer file format extensions"
+        },
+        "116": {
+            "input": "  Progress in Energy and Combustion Science, Nature Energy, and Chemical Reviews ",
+            "output": "top journals"
+        },
+        "117": {
+            "input": "ITALO-ETHIOPIAN WAR, EGYPT AND THE SUDAN, and WAR OF THE SPANISH SUCCESSION ",
+            "output": "historical wars"
+        },
+        "118": {
+            "input": "2, 3, 5, 7 ",
+            "output": "prime numbers"
+        },
+        "119": {
+            "input": "Hantavirus Infection, Q Fever, and Hansen's Disease  ",
+            "output": "infectious diseases"
+        },
+        "120": {
+            "input": " Weightlifting, Vaulting, and Rowing   ",
+            "output": "sports"
+        },
+        "121": {
+            "input": "The Architecture of Open Source Applications, Algorithms to Live By: The Computer Science of Human Decisions, and The Art of the Start: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything  ",
+            "output": "Computer Science books"
+        },
+        "122": {
+            "input": "  Arbor on the Volga embankment, House AD Usanina, and Freedom Square in Tikhvin ",
+            "output": "tourist_attractions"
+        },
+        "123": {
+            "input": "  The Subtle Knife, The Three-Body Problem, and Catching Fire ",
+            "output": "science fiction books"
+        },
+        "124": {
+            "input": "Stirling's approximation, Shannon\u2013Hartley theorem, and Schottky's theorem ",
+            "output": "math theorems"
+        },
+        "125": {
+            "input": " Night suits, Socks, and Sweatshirts   ",
+            "output": "Apparel"
+        },
+        "126": {
+            "input": "dollar, euro, yuan",
+            "output": "currency"
+        },
+        "127": {
+            "input": "Augusta Savage, Louise Bourgeois, Mary Cassatt, and Elaine Sturtevant",
+            "output": "female artist"
+        },
+        "128": {
+            "input": "gallium, hafnium, and silver",
+            "output": "chemical elements with high density"
+        },
+        "129": {
+            "input": "molybdenum, indium, and yttrium",
+            "output": "chemical elements with high density"
+        },
+        "130": {
+            "input": "Drifblim, Squirtle, and Rayquaza",
+            "output": "pokeman"
+        },
+        "131": {
+            "input": "TeenVogue.com, NME, and Tampa Bay Review",
+            "output": "the media"
+        },
+        "132": {
+            "input": "Lassi, Konir Dom, and Sev tameta",
+            "output": "indian foods"
+        },
+        "133": {
+            "input": " Sharanahua, Chairel, and Tafi",
+            "output": "extinct languages"
+        },
+        "134": {
+            "input": "Malwarebytes, Brandwatch, and Qualtrics",
+            "output": "tech companies"
+        },
+        "135": {
+            "input": "The building of the gymnasium, Historical Reserve - the ruins of the mill them. KN Grudinina, and Chamber Stroganoff",
+            "output": "tourist_attractions"
+        },
+        "136": {
+            "input": "Cysticercosis or Taeniasis, Anthrax, and Listeriosis ",
+            "output": "infectious diseases"
+        },
+        "137": {
+            "input": "Building of meteorological station, Manor Kozhin, and Watch tower",
+            "output": "tourist_attractions"
+        },
+        "138": {
+            "input": "iron, nickel, and tungsten",
+            "output": "chemical elements with high density"
+        },
+        "139": {
+            "input": " Ellesmere Island, Madagascar, and Baffin Island ",
+            "output": "large islands"
+        },
+        "140": {
+            "input": "Salamence, Zapdos, and Moltres ",
+            "output": "pokeman"
+        },
+        "141": {
+            "input": "Skirts, Dresses, and Tshirts  ",
+            "output": "Apparel"
+        },
+        "142": {
+            "input": "Nature Nanotechnology, Annual Review of Biochemistry, and The Lancet Neurology ",
+            "output": "top journals"
+        },
+        "143": {
+            "input": " Nature Reviews Molecular Cell Biology, IEEE Communications Surveys and Tutorials, and Nature Photonics ",
+            "output": "top journals"
+        },
+        "144": {
+            "input": "  United States, Japan, and China ",
+            "output": "countries with large population"
+        },
+        "145": {
+            "input": " Plague, human, Dengue Virus Infection, and Cryptosporidiosis ",
+            "output": "infectious diseases"
+        },
+        "146": {
+            "input": "FINAL FANTASY XIV Heavensward, Strife, and The Secret Of Hildegards ",
+            "output": "games on Steam"
+        },
+        "147": {
+            "input": "wsstyles, json, and ws ",
+            "output": "computer file format extensions"
+        },
+        "148": {
+            "input": " Barbary Sheep, Yellow-Crested Cockatoo, and Leadbeater's Possum",
+            "output": "animals"
+        },
+        "149": {
+            "input": "  DemandBase, InfusionSoft, and HotSchedules ",
+            "output": "tech companies"
+        },
+        "150": {
+            "input": "  Ngardi, Klallam, and Old Prussian ",
+            "output": "extinct languages"
+        },
+        "151": {
+            "input": "tower Kantemirovs, The building of the hotel 'cysts', and House of merchant A. Lebedev  ",
+            "output": "tourist_attractions"
+        },
+        "152": {
+            "input": " post office, Mansion tradesman PF Blinov, and The building of the Russian-Chinese Bank   ",
+            "output": "tourist_attractions"
+        },
+        "153": {
+            "input": "Khichu, Chapati, and Sev khamani ",
+            "output": "indian foods"
+        },
+        "154": {
+            "input": "  Figure skating, Football, and Cycling Road ",
+            "output": "sports"
+        },
+        "155": {
+            "input": "Sunglasses, Pendant, and Watches  ",
+            "output": "accessories"
+        },
+        "156": {
+            "input": "Bora Sawul, Keerai masiyal, and Shahi tukra ",
+            "output": "indian foods"
+        },
+        "157": {
+            "input": "  Spotted Ground Squirrel, Hispid Cotton Rat, and Tufted Gray Langur ",
+            "output": "animals"
+        },
+        "158": {
+            "input": "6abc.com, Supermarket News, and Khaama Press (press release) (blog)  ",
+            "output": "the media"
+        },
+        "159": {
+            "input": "MMWR. Surveillance summaries, National vital statistics reports, and Nature Reviews Materials",
+            "output": "top journals"
+        },
+        "160": {
+            "input": "ICGA, IEEE, and Journal of the ACM",
+            "output": "Computer Science journals"
+        },
+        "161": {
+            "input": "John Tyler, Bill Clinton, and Herbert Hoover",
+            "output": "presidents of the U.S"
+        },
+        "162": {
+            "input": "Rubella, Tetanus, and Varicella Hospitalizations",
+            "output": "vaccine preventable diseases"
+        },
+        "163": {
+            "input": "ZULU WAR, MONMOUTH'S REBELLION, and THIRTY YEAR'S WAR",
+            "output": "historical wars"
+        }
+    }
+}

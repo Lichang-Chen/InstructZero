@@ -1,0 +1,207 @@
+{
+    "metadata": {
+        "num_examples": 50
+    },
+    "examples": {
+        "1": {
+            "input": "42",
+            "output": "molybdenum"
+        },
+        "2": {
+            "input": "85",
+            "output": "astatine"
+        },
+        "3": {
+            "input": "63",
+            "output": "europium"
+        },
+        "4": {
+            "input": "107",
+            "output": "bohrium"
+        },
+        "5": {
+            "input": "77",
+            "output": "iridium"
+        },
+        "6": {
+            "input": "93",
+            "output": "neptunium"
+        },
+        "7": {
+            "input": "22",
+            "output": "titanium"
+        },
+        "8": {
+            "input": "118",
+            "output": "oganesson"
+        },
+        "9": {
+            "input": "47",
+            "output": "silver"
+        },
+        "10": {
+            "input": "39",
+            "output": "yttrium"
+        },
+        "11": {
+            "input": "52",
+            "output": "tellurium"
+        },
+        "12": {
+            "input": "50",
+            "output": "tin"
+        },
+        "13": {
+            "input": "75",
+            "output": "rhenium"
+        },
+        "14": {
+            "input": "67",
+            "output": "holmium"
+        },
+        "15": {
+            "input": "64",
+            "output": "gadolinium"
+        },
+        "16": {
+            "input": "98",
+            "output": "californium"
+        },
+        "17": {
+            "input": "25",
+            "output": "manganese"
+        },
+        "18": {
+            "input": "7",
+            "output": "nitrogen"
+        },
+        "19": {
+            "input": "97",
+            "output": "berkelium"
+        },
+        "20": {
+            "input": "62",
+            "output": "samarium"
+        },
+        "21": {
+            "input": "117",
+            "output": "tennessine"
+        },
+        "22": {
+            "input": "3",
+            "output": "lithium"
+        },
+        "23": {
+            "input": "102",
+            "output": "nobelium"
+        },
+        "24": {
+            "input": "94",
+            "output": "plutonium"
+        },
+        "25": {
+            "input": "37",
+            "output": "rubidium"
+        },
+        "26": {
+            "input": "24",
+            "output": "chromium"
+        },
+        "27": {
+            "input": "41",
+            "output": "niobium"
+        },
+        "28": {
+            "input": "19",
+            "output": "potassium"
+        },
+        "29": {
+            "input": "79",
+            "output": "gold"
+        },
+        "30": {
+            "input": "11",
+            "output": "sodium"
+        },
+        "31": {
+            "input": "59",
+            "output": "praseodymium"
+        },
+        "32": {
+            "input": "45",
+            "output": "rhodium"
+        },
+        "33": {
+            "input": "46",
+            "output": "palladium"
+        },
+        "34": {
+            "input": "100",
+            "output": "fermium"
+        },
+        "35": {
+            "input": "109",
+            "output": "meitnerium"
+        },
+        "36": {
+            "input": "99",
+            "output": "einsteinium"
+        },
+        "37": {
+            "input": "44",
+            "output": "ruthenium"
+        },
+        "38": {
+            "input": "103",
+            "output": "lawrencium"
+        },
+        "39": {
+            "input": "1",
+            "output": "hydrogen"
+        },
+        "40": {
+            "input": "114",
+            "output": "flerovium"
+        },
+        "41": {
+            "input": "90",
+            "output": "thorium"
+        },
+        "42": {
+            "input": "84",
+            "output": "polonium"
+        },
+        "43": {
+            "input": "26",
+            "output": "iron"
+        },
+        "44": {
+            "input": "72",
+            "output": "hafnium"
+        },
+        "45": {
+            "input": "101",
+            "output": "mendelevium"
+        },
+        "46": {
+            "input": "107",
+            "output": "bohrium"
+        },
+        "47": {
+            "input": "113",
+            "output": "nihonium"
+        },
+        "48": {
+            "input": "64",
+            "output": "gadolinium"
+        },
+        "49": {
+            "input": "102",
+            "output": "nobelium"
+        },
+        "50": {
+            "input": "10",
+            "output": "neon"
+        }
+    }
+}

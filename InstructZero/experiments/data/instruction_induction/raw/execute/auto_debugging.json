@@ -1,0 +1,39 @@
+{
+    "metadata": {
+        "num_examples": 8
+    },
+    "examples": {
+        "1": {
+            "input": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```",
+            "output": "5"
+        },
+        "2": {
+            "input": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```",
+            "output": "9"
+        },
+        "3": {
+            "input": "```\nwhile True\n\tprint('hello world')\n```",
+            "output": "SyntaxError: invalid syntax"
+        },
+        "4": {
+            "input": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```",
+            "output": "625"
+        },
+        "5": {
+            "input": "```\nx = [1, 2, 3]\nprint(x[2])\n```",
+            "output": "3"
+        },
+        "6": {
+            "input": "```\nx = [1, 2, 3]\nprint(x[4])\n```",
+            "output": "IndexError: list index out of range"
+        },
+        "7": {
+            "input": "```\nx = [2*i for i in range(10)]\n```",
+            "output": "12"
+        },
+        "8": {
+            "input": "```\nif x < 5:\n\tpass\n```",
+            "output": "NameError: name 'x' is not defined"
+        }
+    }
+}

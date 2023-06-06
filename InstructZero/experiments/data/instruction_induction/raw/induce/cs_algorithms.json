@@ -1,0 +1,635 @@
+{
+    "metadata": {
+        "num_examples": 156
+    },
+    "examples": {
+        "1": {
+            "input": "Strings: ZUIEJOBQXVLXBMVOOMNJQSHJPY OVCOZNKRCXBYSMWOPRWMXIPCMRKX",
+            "output": "8"
+        },
+        "2": {
+            "input": "Strings: GDMKSZERXGPYTKJRQMLSSKLEALAJGS IEENJJUFVSYNX",
+            "output": "4"
+        },
+        "3": {
+            "input": "Strings: MKBOAUC SZFLGZIFSVPNIANSPZCXZSDJPLMBYK",
+            "output": "2"
+        },
+        "4": {
+            "input": "Strings: CYMELIHGBDQGYBLUJYJVNTZAXBLVZP BCRFZFYGPYIQZHHOYGDHQQSXFXA",
+            "output": "8"
+        },
+        "5": {
+            "input": "Strings: IWDVXFIXWRPQDLVNNTX LBYQEIHRUZZOUGBPFBMNHG",
+            "output": "4"
+        },
+        "6": {
+            "input": "Strings: AHRUEBOQUDUZONIRLBWDMBYVYXGHXDK KKILVIIYBMCUMLN",
+            "output": "4"
+        },
+        "7": {
+            "input": "Strings: HLTTGBFGIOJSSQKOBPBITH OLRMR",
+            "output": "1"
+        },
+        "8": {
+            "input": "Strings: BTSBRXIM RFKJBQZFUTDRO",
+            "output": "3"
+        },
+        "9": {
+            "input": "Strings: OQFGPNSKFRLUONEZMZCWPKYILUZ LATPRLGOPCKUNHOEJEKMLXKMINC",
+            "output": "9"
+        },
+        "10": {
+            "input": "Strings: YMOAVCDYFGWHSHIPFSVLJOEN AEVENRFVRSHXBFITCOBZMEAPOXMNSB",
+            "output": "9"
+        },
+        "11": {
+            "input": "Strings: LONUPTDGMYUOTLSKOEPSVRUT SVTZVMLSGZWOWSMPHZYYFVRERFYXUI",
+            "output": "9"
+        },
+        "12": {
+            "input": "Strings: RHULBSLGMH EPRVXZZITZ",
+            "output": "1"
+        },
+        "13": {
+            "input": "Strings: LBKLB DNXMDOHDA",
+            "output": "0"
+        },
+        "14": {
+            "input": "Strings: TKNXLHROPQT SOOJICDDTXZ",
+            "output": "2"
+        },
+        "15": {
+            "input": "Strings: WNYPV FDMTFDHIG",
+            "output": "0"
+        },
+        "16": {
+            "input": "Strings: GALMEOFD EEESGJITJJNUJEF",
+            "output": "3"
+        },
+        "17": {
+            "input": "Strings: ASZKZUPCKE ZJISW",
+            "output": "1"
+        },
+        "18": {
+            "input": "Strings: VIRVRHRSTQBLLSYPZDVYCFPSQRXNA SPLYVHLWMLDJVYMQTOZMVOJF",
+            "output": "8"
+        },
+        "19": {
+            "input": "Strings: QKRDZQLSJTVEDXNLRLTTXAYFRPJGSYE JQIFPWTJHKLKFCNCMJVJ",
+            "output": "6"
+        },
+        "20": {
+            "input": "Strings: MVMILQCYFHDAASURNFVMISNCRWJVUZY YJVZOIEDLDVNPZYXNDOY",
+            "output": "8"
+        },
+        "21": {
+            "input": "Strings: BAPVGVEFNWFVSYMIEMIEGLCWZCFPZIH RAAVDBZMUZZIRXLZRNJXEXZL",
+            "output": "7"
+        },
+        "22": {
+            "input": "Strings: REFVJLZIV PJIQB",
+            "output": "2"
+        },
+        "23": {
+            "input": "Strings: AAYKJNQ PIFNBDPWHUWKPFGESVJTUFLJI",
+            "output": "2"
+        },
+        "24": {
+            "input": "Strings: CZUWAQSJOS LTHWJNYRZ",
+            "output": "2"
+        },
+        "25": {
+            "input": "Strings: CHWTAICFFAT YHNQTPXSVDYRPOMWYARFOEZTOYH",
+            "output": "5"
+        },
+        "26": {
+            "input": "Strings: DSBH GXJVQQQBTXOWGHXJUOKLBNIOS",
+            "output": "2"
+        },
+        "27": {
+            "input": "Strings: DYVV BHMSZ",
+            "output": "0"
+        },
+        "28": {
+            "input": "Strings: BCNFICIGBZTLXRGLTT VVQEAJ",
+            "output": "0"
+        },
+        "29": {
+            "input": "Strings: GAEFWMKQVZFRROFVHAPSRVSWWLH JSLUQHCVWSBZHVDJBFOEPSI",
+            "output": "7"
+        },
+        "30": {
+            "input": "Strings: DFYROOQEWODHGFXQQVEN WEZQAVCTR",
+            "output": "3"
+        },
+        "31": {
+            "input": "Strings: BYUW EXOPAWZ",
+            "output": "1"
+        },
+        "32": {
+            "input": "Strings: IDTAXGJXELOZLN OKOFRRTMQSGRLMSHNJJ",
+            "output": "4"
+        },
+        "33": {
+            "input": "Strings: CDHFJDBCSSQWZSEEOOEB RENSFROWFVLI",
+            "output": "2"
+        },
+        "34": {
+            "input": "Strings: MJHKNGFMMMLECOJJV AWWSXYCAEYJ",
+            "output": "2"
+        },
+        "35": {
+            "input": "Strings: FFNGBRGSGNLHTBWT JNDCPZKUJQZZMINRDFXLGUE",
+            "output": "3"
+        },
+        "36": {
+            "input": "Strings: PZWLQBSQWQNELMGOVWRNOXS WIWUSEVJKKPQXRWVEDJVTMHQODQJ",
+            "output": "7"
+        },
+        "37": {
+            "input": "Strings: ZJYYBHRZD QZLVSBBRFYUWUZADYYAPTEEIGKG",
+            "output": "5"
+        },
+        "38": {
+            "input": "Strings: QYSMXD UZMNNIYZJSNFVD",
+            "output": "3"
+        },
+        "39": {
+            "input": "Strings: NBEQSNTMRZONIEIGTHPAFYJORIUKGPG OVYCIMYRYKNXDOAFNQQJZFVS",
+            "output": "6"
+        },
+        "40": {
+            "input": "Strings: SLPYLLZXEWXUSAGDCX RNMVHJQRBO",
+            "output": "0"
+        },
+        "41": {
+            "input": "Strings: IANHQXDNPCQVEGKXXBQWHNQD IVTCKAO",
+            "output": "3"
+        },
+        "42": {
+            "input": "Strings: KRSJFOQJGURTYJOXGGEWZVD JYBDBAETCCTIHYGACGMZFGW",
+            "output": "6"
+        },
+        "43": {
+            "input": "Strings: RFTHYLKGCYMH FNXNODNAZYULCSMHHUOOZDMBQUU",
+            "output": "6"
+        },
+        "44": {
+            "input": "Strings: SWTZJLOOWDYFUFROBBLAMNWK KLUSRJAENROXYEOORTSBSRNT",
+            "output": "7"
+        },
+        "45": {
+            "input": "Strings: ONCYPZ KHKSXCJGOHZGU",
+            "output": "2"
+        },
+        "46": {
+            "input": "Strings: PXUENIBQITKZRYSRYDXWZIOVULH OGNJNMOXHUKRJDXMWLLGNLLIVNIXS",
+            "output": "9"
+        },
+        "47": {
+            "input": "Strings: UYRMHKJSKYLQHMPBBJNNEKLYXTSXDLE EWLDGNUQGOJLPJBBTRODQGLZKZ",
+            "output": "9"
+        },
+        "48": {
+            "input": "Strings: OHGEFHPZEWRYELRDVEVMLTLDJLC HQFWSZMLEIWEHCRPOEAWJXVSVXKEAA",
+            "output": "9"
+        },
+        "49": {
+            "input": "Strings: WAOJCDLAAPBMPAKJYA CPMZMVLBQFHGJQG",
+            "output": "4"
+        },
+        "50": {
+            "input": "Strings: RBATN HINTMOQUXFSJUYEYMBOQF",
+            "output": "1"
+        },
+        "51": {
+            "input": "Strings: ZXIKUONGSPCDWHFNFXO UGFOKEOJPGGQDSVTVTVCBDORMZRXE",
+            "output": "7"
+        },
+        "52": {
+            "input": "Strings: HZCEEHBLMDTZFLBQZJV NPRNUVHPXBGGACZJHZXQPFLU",
+            "output": "6"
+        },
+        "53": {
+            "input": "Strings: AITJENBFQLQRKCCWY FUUPF",
+            "output": "1"
+        },
+        "54": {
+            "input": "Strings: OFMJZHQFNJOBZFU FSQFFOZS",
+            "output": "5"
+        },
+        "55": {
+            "input": "Strings: NHQMDKQZAFFLVRUEPT BONKGYODLMNGUQHBTGZSBAMPONZHG",
+            "output": "6"
+        },
+        "56": {
+            "input": "Strings: PHPPAERJJUJHSSPYUEGLQHC RLNARJTZOUNFYOQPEIH",
+            "output": "7"
+        },
+        "57": {
+            "input": "Strings: PUIIYBWMERZJTRNUHLE ODUYHCEVJSIJD",
+            "output": "4"
+        },
+        "58": {
+            "input": "Strings: ZPRQJBIWREYREVQPBGVIZNLNCGOFAZK PYAVEGVCLPFEVTHNBRT",
+            "output": "7"
+        },
+        "59": {
+            "input": "Strings: ERYQ ZUBAOBNPP",
+            "output": "0"
+        },
+        "60": {
+            "input": "Strings: SLBHKNAILYGFLPHDOUYVNLQLXLS RUSFS",
+            "output": "3"
+        },
+        "61": {
+            "input": "Strings: FGYJQAYZCLAYNUOCQ LPIOAWCTAHXXQQHCDLUDHNLW",
+            "output": "4"
+        },
+        "62": {
+            "input": "Strings: NLQZDVESKHCTOAANGJNCTZAIQJIXBSD FZOEQWVCVCOLQSWI",
+            "output": "6"
+        },
+        "63": {
+            "input": "Strings: DCQOCUI WYAOJXQBFONJYPQVBHEEDCLTDOSE",
+            "output": "3"
+        },
+        "64": {
+            "input": "Strings: DSGRERKHCJOU HFXHVJNOJRGAFORXRCVQIFE",
+            "output": "4"
+        },
+        "65": {
+            "input": "Strings: XNOR MFFMYG",
+            "output": "0"
+        },
+        "66": {
+            "input": "Strings: XWKWMVHWHJTGBXKUOYH FCGIOFABDEJGTJ",
+            "output": "2"
+        },
+        "67": {
+            "input": "Strings: MJWFEEKUPJBCVQAFQJRVSP IGLRPRCCSGQUTUSXMBOXVROP",
+            "output": "5"
+        },
+        "68": {
+            "input": "Strings: IXZPCMZDGNAFXGQWB JTQCSD",
+            "output": "2"
+        },
+        "69": {
+            "input": "Strings: HAWBXROVHUFNLRQMQOBDNOU EPMFOTOXWGWXDFLWRDQFCHJNYDDHF",
+            "output": "7"
+        },
+        "70": {
+            "input": "Strings: BWDNDOBJFBTSTUCZEECAYAMDZ ZNPDZSETUMRKMQFZGOMXYPNBVPG",
+            "output": "7"
+        },
+        "71": {
+            "input": "Strings: RBKANHCVGNZK KGWAQBGHGF",
+            "output": "4"
+        },
+        "72": {
+            "input": "Strings: EJJECSHNYQ FAFTZ",
+            "output": "0"
+        },
+        "73": {
+            "input": "Strings: OXLQVFSUIFEINSDYSXATKGJONPD OFPABTNMOHZUVGQFXJAQRATCJCUEKG",
+            "output": "9"
+        },
+        "74": {
+            "input": "Strings: ECAGQQIWDQMKVQQZUAQXOUDJQWQXR ZDLSKGEIZCVIECVDOPGQXDQTGDADZQ",
+            "output": "9"
+        },
+        "75": {
+            "input": "Strings: LNVOVEVRU DOKTNMPIUTCOCDQKKM",
+            "output": "2"
+        },
+        "76": {
+            "input": "Strings: EUAECCZHZYBDGAZJZFWXRFBJLN XAYOXAZRFLC",
+            "output": "7"
+        },
+        "77": {
+            "input": "Strings: PAAHKGSYDKYNUWBHCHNIDDZIU EHKUAGXTXSXLXQXEXQYOIQPDZ",
+            "output": "8"
+        },
+        "78": {
+            "input": "Strings: CESZAVMWGFFAGDPOC XVXQMYRLFNGJIFDWAPBCJCKFEPM",
+            "output": "7"
+        },
+        "79": {
+            "input": "Strings: BYPOHCXVLNHNSBZSBZPRBJCGBDZBRY DCNYBJDKCHZAXZDUPAVBJNZU",
+            "output": "9"
+        },
+        "80": {
+            "input": "Strings: HMUGSXD NAHLOTFOBVDSTRQJOFPMR",
+            "output": "2"
+        },
+        "81": {
+            "input": "Strings: OQOWSVSUTBYWBPODZSGNEFNUPERNLX OUWYNHDELPQNALGJ",
+            "output": "8"
+        },
+        "82": {
+            "input": "Strings: IHGBPSSPVYZYWVWAMOUOODTEIKZT VQJTLDFESGJJBHTGZEOHSUTICTU",
+            "output": "8"
+        },
+        "83": {
+            "input": "Strings: JLJKEJKNNNCPGYPGSZJDAEOW JAUZXJCUJCBYTBPXRIBLHUVTETDJY",
+            "output": "7"
+        },
+        "84": {
+            "input": "Strings: TMCKD YRHGFFJUZQFOFBMYHFGHAPLYSGWWONH",
+            "output": "1"
+        },
+        "85": {
+            "input": "Strings: ZNCIXFTBCEZTUGFPBODGTJJGFZ WCVEVDNUKYWULYTPCXPHYQXER",
+            "output": "4"
+        },
+        "86": {
+            "input": "Strings: AMYADU RLVXX",
+            "output": "0"
+        },
+        "87": {
+            "input": "Strings: MLIWPDTOSBFBYIVQLPUUA OGOIJOFQLZRIJOLUEAA",
+            "output": "7"
+        },
+        "88": {
+            "input": "Strings: CUGQTXSACQSZWEKX FJXR",
+            "output": "1"
+        },
+        "89": {
+            "input": "Strings: GEVEQUAICPIH LEXMKZGDJU",
+            "output": "2"
+        },
+        "90": {
+            "input": "Strings: VHCYJ QAFQ",
+            "output": "0"
+        },
+        "91": {
+            "input": "Strings: RQJAYNXXVN IRTWSTSJJ",
+            "output": "2"
+        },
+        "92": {
+            "input": "Strings: DNMNZRMIFPYJWQXGN YCMDRNJJRCXNMLWKXQWKGAXOXS",
+            "output": "7"
+        },
+        "93": {
+            "input": "Strings: RSEZREEVCIVIVPHVLSH VDNCOFYJVZNQV",
+            "output": "4"
+        },
+        "94": {
+            "input": "Strings: JRIDVJBLXJDNJFVLHSZUXPIMBJPWIF NHBEUXZTMGGXISBCFWP",
+            "output": "7"
+        },
+        "95": {
+            "input": "Strings: AKVAQUBCUQYMJROLPGPIFNCEIWR RBEQXEAHKZUHSHXIZQEBLDSPIAWLRR",
+            "output": "9"
+        },
+        "96": {
+            "input": "Strings: LRODT NQWOEWZYHAGZKDE",
+            "output": "2"
+        },
+        "97": {
+            "input": "Strings: KQZIG HTKBVWWCECUBYRDXSBERXE",
+            "output": "1"
+        },
+        "98": {
+            "input": "Strings: BPZXISMAWWPZLLOQC ZAQYATUFEXGNGDTESQVTOULU",
+            "output": "4"
+        },
+        "99": {
+            "input": "Strings: SZPHKVR ECOUO",
+            "output": "0"
+        },
+        "100": {
+            "input": "Strings: CBWJOEHWAPYIGFPGFXHYRNDPU XCYEYHHCNIPZYZYJIXJILH",
+            "output": "8"
+        },
+        "101": {
+            "input": "Strings: RNLAXMLRYIWXQDQBRPI ISTFIALEDOXSDLJIQEM",
+            "output": "5"
+        },
+        "102": {
+            "input": "Strings: TTZHBVYAYNNSRMKJYUJDADYF DTVMQVKOGPZEKBVTYROKAILFWSAZ",
+            "output": "9"
+        },
+        "103": {
+            "input": "Strings: AAMFOTLGMNTINABJTPCNGDHNS OMDWCMBVBOIATGVOEQSBLAIUXERKYC",
+            "output": "7"
+        },
+        "104": {
+            "input": "Strings: KTPDBBPWECUAUDZCTELZ PQGPBFRXBKWIBYZBQOJKTRBDJP",
+            "output": "6"
+        },
+        "105": {
+            "input": "Strings: OPVTLJVBJCLIIROPPNNJMDUX SVJGEHSWEXRBNNMLLPJGHSKHT",
+            "output": "6"
+        },
+        "106": {
+            "input": "Strings: FFOBNUN ZPSXDKMEYDVCRXMMYPWCMKVTQKH",
+            "output": "0"
+        },
+        "107": {
+            "input": "Strings: PTADJRXRACSNGDDZ ZBNQQCZ",
+            "output": "2"
+        },
+        "108": {
+            "input": "Strings: IDFKYITFTNLAKCLZSDIPZCPGMSAFSN RFXYGTVOZNZPTFKNTQSQYL",
+            "output": "8"
+        },
+        "109": {
+            "input": "Strings: ZSCEOJAUEUKFVFWVEQY GIVYJEIAJSOTVUMAUTLLOUKYFQNA",
+            "output": "8"
+        },
+        "110": {
+            "input": "Strings: ZVJFWMLVSJOTJCRBZZ LWNNXPXWZHNJEXWVVARRYQILBALVQJR",
+            "output": "7"
+        },
+        "111": {
+            "input": "Strings: RIKYWRELGLPQPTCDQLKIORFTVBNZD FROBZADTRMYFQTLOYRDEXMPQIGYQPI",
+            "output": "8"
+        },
+        "112": {
+            "input": "Strings: VVPEIBPZNQB CDZYXFWVKOMVEEPXL",
+            "output": "4"
+        },
+        "113": {
+            "input": "Strings: XWSCOLDPOLGRBKYCRUMR RHWQVDTRGOWMAKRUFNYRLHTZXOVXLD",
+            "output": "7"
+        },
+        "114": {
+            "input": "Strings: EOXJ RCGHPKQDZ",
+            "output": "0"
+        },
+        "115": {
+            "input": "Strings: ZDNEVOKTVBFIBGUKKBXHHNGFJLDJX DPTXFCBBFNMAYNIWZMAHEBHOVZYLBF",
+            "output": "8"
+        },
+        "116": {
+            "input": "Strings: AXAQTQZHDTHWXJWQDUIJMBDTEYJZO LTMYIBGO",
+            "output": "4"
+        },
+        "117": {
+            "input": "Strings: AHYHKGPBICXLOSSXBTBPWFEQYLHLOCU AEMBXQAZXYFEUDQZYNQI",
+            "output": "8"
+        },
+        "118": {
+            "input": "Strings: ALIMGXZTTAS IZQLGDMY",
+            "output": "2"
+        },
+        "119": {
+            "input": "Strings: MJDELHFBYRWJHJOJOYXXWM QWHYPOTZJGNTWMIZCMCGRNOEXV",
+            "output": "6"
+        },
+        "120": {
+            "input": "Strings: XEDMHYSMKVVXGTFZZRAYWFSPIKBZ YTLJRRKPIZTSDRO",
+            "output": "6"
+        },
+        "121": {
+            "input": "Strings: FGNMVZKEOYBYOFARJF ZHOTZIEJEPE",
+            "output": "3"
+        },
+        "122": {
+            "input": "Strings: NIWXFZYIKOZBQZXDKNPD WGUXGVXCOKHYWCKQJ",
+            "output": "5"
+        },
+        "123": {
+            "input": "Strings: PBVKYTPAZJHMFREWUGGNKHZKUOVTY IZVFBOKPVQEYPPGWTCLR",
+            "output": "6"
+        },
+        "124": {
+            "input": "Strings: VLTJQLZUXOT PHGLJFWPHOMLEESWVLELOQM",
+            "output": "4"
+        },
+        "125": {
+            "input": "Strings: CMIWEPWOJSSJKYHAVLMESUDWTELFNDK GBJIEUGHKMQDYXMFQAHVSXFJL",
+            "output": "8"
+        },
+        "126": {
+            "input": "Strings: YLCPYAUSMNJIH RDRHEYNZVQBFRZNRQPKWQSABBFA",
+            "output": "3"
+        },
+        "127": {
+            "input": "Strings: TWQPSBLMEELHHKTZLFQ TSHJVTLO",
+            "output": "5"
+        },
+        "128": {
+            "input": "Strings: NPNVTTBDXXQPERDBCTAWVNCZVHUGW LVYGORNYUMOHRKVWXFVXFQNJCGZPYU",
+            "output": "9"
+        },
+        "129": {
+            "input": "Strings: ZPQLPKQBSZUMWZGVHKDSP AYWZDTKIFKZXNTL",
+            "output": "3"
+        },
+        "130": {
+            "input": "Strings: TZIWMBYEVSDHKOVAIXTZ DUAPNZHVFSVIPGLEMNFOJ",
+            "output": "5"
+        },
+        "131": {
+            "input": "Strings: JSKTKWOUIAUUMHYSBINNTRPTVQRHLM VMZHWBIWYDJJLHMGDUMOGY",
+            "output": "6"
+        },
+        "132": {
+            "input": "Strings: HDMAPHPVOMFOHLQJPVCMSQYKJLV DRYSSVFFXQGLYBGRSMIBUTBITRASV",
+            "output": "7"
+        },
+        "133": {
+            "input": "Strings: ETHIKRPMTNW RTDNPVYVDIQYAFBVRLNIZXO",
+            "output": "4"
+        },
+        "134": {
+            "input": "Strings: MOYBQK LNQTPJCVUEAXCPDREDWZTCXI",
+            "output": "1"
+        },
+        "135": {
+            "input": "Strings: RSRK NMHTBFBTSFEFRMV",
+            "output": "2"
+        },
+        "136": {
+            "input": "Strings: SJSSYLLXBITOP XYCPEQLPPKFNSYVUCVBG",
+            "output": "3"
+        },
+        "137": {
+            "input": "Strings: NRKULFPPWDU ZBBAC",
+            "output": "0"
+        },
+        "138": {
+            "input": "Strings: JXDCYCTAITWCDVYOEIWLTKZ CIQRKJIPMEVNKVYPAPHFEXXGW",
+            "output": "6"
+        },
+        "139": {
+            "input": "Strings: QSIYPOCNTTQALBSDKWA GEMUZH",
+            "output": "0"
+        },
+        "140": {
+            "input": "Strings: XKLFCCQGRPYWCPBRPZXSUKKCIEVBS CKIXEUDDSGDGWCYPTST",
+            "output": "6"
+        },
+        "141": {
+            "input": "Strings: MOBGRGLFUYHHDFY MSVGFQUAMCYYKMQXNNNC",
+            "output": "6"
+        },
+        "142": {
+            "input": "Strings: MOAXGLQYTZTHFPSIMRBWCSTGZTNATV VKGAKZEBIGAFIEJBYOFVZYBPELGPCK",
+            "output": "6"
+        },
+        "143": {
+            "input": "Strings: XGTXQDSUVYWRHTBAPDOYHEBTTSSM YTHDPDEEZBFVSDMXQLMNPMPPQKFTX",
+            "output": "8"
+        },
+        "144": {
+            "input": "Strings: LCJREJADAJUXD YDRIMCZQXFWAHISODWAURKAOGROAZU",
+            "output": "5"
+        },
+        "145": {
+            "input": "Strings: NETEE RRTIADYML",
+            "output": "1"
+        },
+        "146": {
+            "input": "Strings: UYWEHHLYGBZBFEONFIDMKMLJZIO LWFPUANXURBHOTOKZECSAITUABEIKLL",
+            "output": "8"
+        },
+        "147": {
+            "input": "Strings: YLTRLTELTSPQPZFADYSQVFLEBGZYYYK YOGHUGMLXRUQYVHSFHV",
+            "output": "7"
+        },
+        "148": {
+            "input": "Strings: EQWQGXMYSXNIPXGYNMQAG OTPBHRVPMOTXKC",
+            "output": "2"
+        },
+        "149": {
+            "input": "Strings: WNWZEKUBXKXTC VNIV",
+            "output": "1"
+        },
+        "150": {
+            "input": "Strings: LAUSFFIRUOOTMKBGUZOLFZ KXCJJKW",
+            "output": "1"
+        },
+        "151": {
+            "input": "Strings: BBRXNYLBODWJDMWJNFZJLVSKNWHPJMJ OBLRAWOPTLWKFHOXYERZPASBJ",
+            "output": "8"
+        },
+        "152": {
+            "input": "Strings: KXQVNDHWCECXJPYGJVOHPWG XQUZQQNNALLPJVWECQQ",
+            "output": "7"
+        },
+        "153": {
+            "input": "Strings: VIKYHXXUYCPOVCTMJIKHV OPZVIBDLNALUIPWMEN",
+            "output": "5"
+        },
+        "154": {
+            "input": "Strings: TBBKB VEEJZEVAZJMZX",
+            "output": "0"
+        },
+        "155": {
+            "input": "Strings: FDXFUHNKJSRCIGWRCBTYPGWQ UQMTSQTFEIYUYAKWSFOUOHKYJRNGC",
+            "output": "9"
+        },
+        "156": {
+            "input": "Strings: XMOXZOFHOEOVIHCLP BVTXCIVTPXSWZYEOJO",
+            "output": "5"
+        },
+        "157": {
+            "input": "Strings: FEJXMRCGTZCSQBIEUEPADOXRCR IKCEXOZDZNLUIQHKSVY",
+            "output": "4"
+        }
+    }
+}
