@@ -2,7 +2,12 @@
 
 Lichang Chen*, Jiuhai Chen*, Tom Goldstein, Heng Huang, Tianyi Zhou
 
-### [Project page](https://lichang-chen.github.io/InstructZero/) | [Paper](https://arxiv.org/abs/2305.4926697)
+### [Project page](https://lichang-chen.github.io/InstructZero/) | [Paper](https://arxiv.org/abs/2306.03082)
+
+<p align="center">
+<img src=images/leviosa.jpg  width="80%" height="60%">
+</p>
+
 
 ## Abstract
 
