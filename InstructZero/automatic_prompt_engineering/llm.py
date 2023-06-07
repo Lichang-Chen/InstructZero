@@ -114,12 +114,6 @@ class Llama_Forward(LLM):
     def generate_text(self, prompts, n):
         if not isinstance(prompts, list):
             prompts = [prompts]
-        # prompt_batches = [prompt[i:i + batch_size]
-        #                   for i in range(0, len(prompt), batch_size)]
-        # if not self.disable_tqdm:
-        #     print(
-        #         f"[{self.config['name']}] Generating {len(prompt) * n} completions, "
-        #         f"split into {len(prompt_batches)} batches of size {batch_size * n}")
         text = []
         for prompt in prompts:
             input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.cuda()
