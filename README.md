@@ -21,10 +21,13 @@ Large language models~(LLMs) are instruction followers, but it can be challengin
 We have two folders in InstructZero:
 - automatic_prompt_engineering: this folder contains the functions from [APE](https://github.com/keirp/automatic_prompt_engineer), like you could use functions in generate.py to calculate the cost of the whole training required. BTW, to ensure a more efficient OPENAI querying, we make asynchronous calls of ChatGPT which is adapted from [Graham's code](https://gist.github.com/neubig/80de662fb3e225c18172ec218be4917a)
 
-- experiments: 
+- experiments: contains the implementation of our pipeline and instruction-coupled kernels.
 
 ## Usage
 
 ```
 sh run_instructzero.sh
 ```
+
+
+stay tuned! 
