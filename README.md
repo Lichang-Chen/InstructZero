@@ -7,6 +7,9 @@ Lichang Chen*, Jiuhai Chen*, Tom Goldstein, Heng Huang, Tianyi Zhou
 <p align="center">
 <img src=images/leviosa.jpg  width="80%" height="60%">
 </p>
+Find the optimal instruction is extremely important for achieving the "charm", and this holds true for Large Language Models as well. ("Wingardium Leviosa" was a charm used to make objects fly, or levitate. If you are interested in "leviOsa", please check the video in our project page).
+
+<br>
 
 If you have any questions, feel free to email Lichang Chen and Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
 
