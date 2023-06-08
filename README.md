@@ -5,10 +5,10 @@
 
 If you find our paper useful, please consider citing:
 ```bibtex
-@inproceedings{chen2023InstructZero,
-        title={InstrcutZero: Efficient Instruction Optimization for Black-Box Large Language Models.},
-        author={Lichang Chen and Jiuhai Chen and Tom Goldstein and Heng Huang and Tianyi Zhou},
-        booktitle={arxiv},
-        year={2023}
-      }
+@article{chen2023instructzero,
+  title={InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models},
+  author={Chen, Lichang and Chen, Jiuhai and Goldstein, Tom and Huang, Heng and Zhou, Tianyi},
+  journal={arXiv preprint arXiv:2306.03082},
+  year={2023}
+}
 ```
