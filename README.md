@@ -58,6 +58,10 @@ export OPENAI_API_KEY=Your_KEY
 bash experiments/run_instructzero.sh
 ```
 
+## Hyperparameters
+Here we introduce the hyperparameters in our algorithm.
+- instrinsic_dim: the dimension of the projection matrix, default=10
+- soft tokens: the length of the tunable prompt embeddings, you can choose from [3, 10]
 
 ## Comments
 Our codebase is based on the following repo:
