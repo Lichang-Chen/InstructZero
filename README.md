@@ -46,4 +46,11 @@ sh run_instructzero.sh
 Replace Your_KEY with your OPENAI API KEY.
 
 
+## Comments
+Our codebase is based on the following repo:
+- [Botorch](https://github.com/pytorch/botorch)
+- [APE](https://github.com/keirp/automatic_prompt_engineer)
+
+Thanks for their efforts to make the code public!
+
 stay tuned! 
