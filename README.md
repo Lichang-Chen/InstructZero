@@ -70,4 +70,4 @@ Our codebase is based on the following repo:
 
 Thanks for their efforts to make the code public!
 
-stay tuned! 
+Stay tuned! We will make the usage and  installation of our packages as easy as possible!
