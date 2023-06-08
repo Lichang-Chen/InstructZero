@@ -43,7 +43,11 @@ conda install botorch -c pytorch -c gpytorch -c conda-forge
 ```
 pip install -r requirements.txt
 ```
-
+- setup APE
+```
+cd InstructZero
+python setup.py install
+```
 ## Usage
 1. Firstly, you need to prepare your OPENAI KEY.
 ```
@@ -51,7 +55,6 @@ export OPENAI_API_KEY=Your_KEY
 ```
 2. Secondly, run the script to reproduce the experiments.
 ```
-cd InstructZero
 bash experiments/run_instructzero.sh
 ```
 
