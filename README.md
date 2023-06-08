@@ -71,3 +71,16 @@ Our codebase is based on the following repo:
 Thanks for their efforts to make the code public!
 
 Stay tuned! We will make the usage and  installation of our packages as easy as possible!
+
+### Citation
+Please consider citing our paper if you used our code, or results, thx!
+```
+@misc{chen2023instructzero,
+title={InstructZero: Efficient Instruction Optimization for Black-Box Large Language Model}, 
+author={Lichang Chen and Jiuhai Chen and Tom Goldstein and Heng Huang and Tianyi Zhou},
+year={2023},
+eprint={2306.03082},
+archivePrefix={arXiv},
+primaryClass={cs.AI},
+}
+```
