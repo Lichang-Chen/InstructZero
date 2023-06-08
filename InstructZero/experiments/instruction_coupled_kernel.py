@@ -1,21 +1,12 @@
 # gpytorch for substring kernel implemented in https://github.com/henrymoss/BOSS/tree/master/boss/code/kernels/string
 from gpytorch.kernels.kernel import Kernel
-from gpytorch.constraints import Interval, Positive
 import torch
 import numpy as np
-import sys
-import logging
-import warnings
-import itertools
-import subprocess
 from tqdm.auto import tqdm, trange
-import argparse
 from pathlib import Path
 import json
 import numpy as np
 import torch
-import time
-import pytorch_lightning as pl
 import os
 import cma
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"

@@ -21,13 +21,29 @@ Large language models~(LLMs) are instruction followers, but it can be challengin
 We have two folders in InstructZero:
 - automatic_prompt_engineering: this folder contains the functions from [APE](https://github.com/keirp/automatic_prompt_engineer), like you could use functions in generate.py to calculate the cost of the whole training required. BTW, to ensure a more efficient OPENAI querying, we make asynchronous calls of ChatGPT which is adapted from [Graham's code](https://gist.github.com/neubig/80de662fb3e225c18172ec218be4917a)
 
-- experiments: contains the implementation of our pipeline and instruction-coupled kernels.
+- experiments: contains the implementation of our pipeline and instruction-coupled kernels. 
+
+## Installation
+- create env
+```
+conda create -n InstructZero
+```
+- install torch >= 1.12 (choose the version that are suitable for your machine), ours:
+```
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
+```
+- install Botorch
+```
+conda install botorch -c pytorch -c gpytorch -c conda-forge
+```
 
 ## Usage
 
 ```
+export OPENAI_API_KEY=Your_KEY
 sh run_instructzero.sh
 ```
+Replace Your_KEY with your OPENAI API KEY.
 
 
 stay tuned! 
