@@ -36,14 +36,21 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cud
 ```
 conda install botorch -c pytorch -c gpytorch -c conda-forge
 ```
+- install other requirements
+```
+pip install -r requirements.txt
+```
 
 ## Usage
-
+1. Firstly, you need to prepare your OPENAI KEY.
 ```
 export OPENAI_API_KEY=Your_KEY
-sh run_instructzero.sh
 ```
-Replace Your_KEY with your OPENAI API KEY.
+2. Secondly, run the script to reproduce the experiments.
+```
+cd InstructZero
+bash experiments/run_instructzero.sh
+```
 
 
 ## Comments
