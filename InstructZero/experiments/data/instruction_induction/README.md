@@ -1,5 +1,5 @@
 # Data
-Data for the instruction induction experiments. Followed [APE][https://github.com/keirp/automatic_prompt_engineer], we collect another 8 instruction induction tasks.
+Data for the instruction induction experiments. Followed We collect another 8 instruction induction tasks besides 24 tasks in [Instruction Induction](https://arxiv.org/abs/2205.10782).
 
 
 ## Content
