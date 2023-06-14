@@ -7,9 +7,8 @@ from automatic_prompt_engineer import ape, data
 from experiments.data.instruction_induction.load_data import load_data, tasks
 from experiments.evaluation.instruction_induction.exec_accuracy import exec_accuracy_evaluator, exec_evaluator
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from automatic_prompt_engineer import generate, evaluate, config, template, data, llm
+from automatic_prompt_engineer import evaluate, config, template, data
 import os
-import sys
 import re
 import transformers
 
@@ -21,8 +20,9 @@ from botorch.acquisition.analytic import ExpectedImprovement
 from gpytorch.kernels import ScaleKernel, MaternKernel
 from gpytorch.priors import GammaPrior
 from instruction_coupled_kernel import *
-from botorch.optim import optimize_acqf
+# from botorch.optim import optimize_acqf
 import time
+import argparse
 
 # from botorch.test_functions import Branin
 SMOKE_TEST = os.environ.get("SMOKE_TEST")
@@ -49,7 +49,7 @@ BATCH_SIZE = 20 if not SMOKE_TEST else 1
 print(f"Using a total of {N_INIT + BATCH_SIZE * N_ITERATIONS} function evaluations")
 
 model_name = "vicuna"
-sub_tasks = ['antonyms', 'cause_and_effect', 'common_concept', 'diff', 'first_word_letter',
+tasks = ['antonyms', 'cause_and_effect', 'common_concept', 'diff', 'first_word_letter',
              'informal_to_formal', 'larger_animal', 'letters_list', 'taxonomy_animal', 'negation', 
              'num_to_verbal', 'active_to_passive', 'singular_to_plural', 'rhymes',
              'second_word_letter', 'sentence_similarity', 'sentiment', 'orthography_starts_with',
@@ -235,8 +235,7 @@ class LMForwardAPI:
             (dev_perf, instruction_score) = self.prompts_set[instruction[0]]
         else:
             if api_model in ['chatgpt']: 
-                dev_perf, instruction_score = evaluate.evaluate_prompts(instruction, self.eval_template, self.eval_data, self.demos_template, self.few_shot_data,
-                    self.conf['evaluation']['method'], self.conf['evaluation'])
+                dev_perf, instruction_score = evaluate.evaluate_prompts(instruction, self.eval_template, self.eval_data, self.demos_template, self.few_shot_data, self.conf['evaluation']['method'], self.conf['evaluation'])
                 dev_perf = dev_perf.sorted()[1][0]
                 self.prompts_set[instruction[0]] = (dev_perf, instruction_score)
             elif api_model in ['llama', 'flan-t5']: 
@@ -321,10 +320,6 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
                     # 'model': 'text-ada-001'
                 }
             }
-        },
-        'llama': {
-            'ckpt_dir': '/data/bobchen/llama/7B',
-            'tokenizer_path': '/data/bobchen/llama/tokenizer.model',
         }
     }
 
@@ -489,9 +484,47 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
                                     base_conf=base_conf)
     test_res = test_res[0]
     test_score = test_res.sorted()[1][0]
-    print(f'Test score on ChatGPT: {test_score}')
+    return test_score
+    # print(f'Test score on ChatGPT: {test_score}')
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="InstructZero pipeline")
+    parser.add_argument(
+        "--task",
+        type=str,
+        default=None,
+        help="The name of the dataset to use (via the datasets library).",
+    )
+    parser.add_argument(
+        "--random_proj",
+        type=str,
+        default="uniform",
+        help="The initialization of the projection matrix A."
+    )
+    parser.add_argument(
+        "--intrinsic_dim",
+        type=int,
+        default=10,
+        help="The instrinsic dimension of the projection matrix"
+    )
+    parser.add_argument(
+        "--n_prompt_tokens",
+        type=int,
+        default=5,
+        help="The number of prompt tokens."
+    )
+    args = parser.parse_args()
+    return args
 
 if __name__ == '__main__':
-    fire.Fire(run)
+    args = parse_args()
+    test_score = run(
+        task=args.task,
+        random_proj=args.random_proj, 
+        instrinsic_dim=args.instrinsic_dim,
+        n_prompt_tokens=args.n_prompt_tokens
+    )
+    print("Finished!!!")
+    print(f'Test score on ChatGPT: {test_score}')
 
 

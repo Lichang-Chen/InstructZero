@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=7
 SFT=5
 RANDOM_PROJ='uniform'
 INTRINSIC_DIM=10
@@ -10,6 +10,6 @@ for i in ${datasets[@]}; do
     python experiments/run_instructzero.py \
     --task $i \
     --random_proj ${RANDOM_PROJ} \
-    --n_prompt_tokens $sft \
+    --n_prompt_tokens $SFT \
     --intrinsic_dim $INTRINSIC_DIM
 done
