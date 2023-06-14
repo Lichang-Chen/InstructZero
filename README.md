@@ -12,7 +12,7 @@ Find the optimal instruction is extremely important for achieving the "charm", a
 
 <br>
 
-If you have any questions, feel free to email Lichang Chen and Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
+If you have any questions, feel free to email the correspondence authors: Lichang Chen and Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
 
 ## About
 We propose a new kind of Alignment! The optimization process in our method is like aligning human with LLMs. (Compared to ours, instruction finetuning is more like aligning LLMs with human.) It is also the first framework to optimize the bad prompts for ChatGPT and finally obtain good prompts.

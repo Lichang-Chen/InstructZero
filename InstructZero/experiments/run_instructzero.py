@@ -48,7 +48,6 @@ N_ITERATIONS = 4 if not SMOKE_TEST else 1
 BATCH_SIZE = 20 if not SMOKE_TEST else 1
 print(f"Using a total of {N_INIT + BATCH_SIZE * N_ITERATIONS} function evaluations")
 
-
 model_name = "vicuna"
 sub_tasks = ['antonyms', 'cause_and_effect', 'common_concept', 'diff', 'first_word_letter',
              'informal_to_formal', 'larger_animal', 'letters_list', 'taxonomy_animal', 'negation', 
@@ -63,7 +62,7 @@ device = 'cuda:0'
 # random_proj = 'normal'
 # api_model = 'flan-t5'
 api_model = 'chatgpt'
-
+HF_cache_dir='/data/bobchen/vicuna-13b'
 ## some parameters:
 # change the instrinsic dimension here.
 # intrinsic_dim = 5
@@ -71,13 +70,10 @@ alpha = 1
 sigma = 1
 
     
-
-
 class LMForwardAPI:
     def __init__(self, model_name=None, eval_data=None, init_prompt=None, init_qa=None, conf=None, base_conf=None,
                  prompt_gen_data=None, random_proj=None, intrinsic_dim=None, n_prompt_tokens=None, few_shot_data=None):
         p = torch.ones(10)
-
         
         HF_cache_dir='/data/bobchen/vicuna-13b'
         kwargs={'torch_dtype': torch.float16}
@@ -281,6 +277,7 @@ class LMForwardAPI:
 
     def return_prompts_set(self):
         return self.prompts_set
+    
 def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
     assert task in tasks, 'Task not found!'
 
