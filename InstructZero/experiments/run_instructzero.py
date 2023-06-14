@@ -22,6 +22,8 @@ from gpytorch.kernels import ScaleKernel, MaternKernel
 from gpytorch.priors import GammaPrior
 from instruction_coupled_kernel import *
 from botorch.optim import optimize_acqf
+import time
+
 # from botorch.test_functions import Branin
 SMOKE_TEST = os.environ.get("SMOKE_TEST")
 ## bayesian opt
@@ -481,7 +483,6 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
         }
     }
     
-
     test_res = ape.evaluate_prompts(prompts=prompts,
                                     eval_template=eval_template,
                                     eval_data=test_data,
@@ -492,7 +493,6 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
     test_res = test_res[0]
     test_score = test_res.sorted()[1][0]
     print(f'Test score on ChatGPT: {test_score}')
-
 
 if __name__ == '__main__':
     fire.Fire(run)

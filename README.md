@@ -4,6 +4,7 @@ Lichang Chen*, Jiuhai Chen*, Tom Goldstein, Heng Huang, Tianyi Zhou
 
 ### [Project page](https://lichang-chen.github.io/InstructZero/) | [Paper](https://arxiv.org/abs/2306.03082)
 
+
 <p align="center">
 <img src=images/leviosa_v1.jpg  width="80%" height="60%">
 </p>
@@ -13,9 +14,11 @@ Find the optimal instruction is extremely important for achieving the "charm", a
 
 If you have any questions, feel free to email Lichang Chen and Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
 
-## Abstract
+## About
+We propose a new kind of Alignment! The optimization process in our method is like aligning human with LLMs. (Compared to ours, instruction finetuning is more like aligning LLMs with human.) It is also the first framework to optimize the bad prompts for ChatGPT and finally obtain good prompts.
 
-Large language models~(LLMs) are instruction followers, but it can be challenging to find the best instruction for different situations, especially for black-box LLMs on which backpropagation is forbidden. Instead of directly optimizing the discrete instruction, we optimize a low-dimensional soft prompt applied to an open-source LLM to generate the instruction for the black-box LLM. On each iteration of the proposed method, which we call InstructZero, a soft prompt is converted into an instruction using the open-source LLM, which is then submitted to the black-box LLM for zero-shot evaluation, and the performance is sent to Bayesian optimization to produce new soft prompts improving the zero-shot performance. We evaluate InstructZero on different combinations of open-source LLMs and APIs including Vicuna and ChatGPT. Our results show that InstructZero outperforms SOTA auto-instruction methods across a variety of downstream tasks.
+## Background
+LLMs are instruction followers, but it can be challenging to find the best instruction for different situations, especially for black-box LLMs on which backpropagation is forbidden. Instead of directly optimizing the discrete instruction, we optimize a low-dimensional soft prompt applied to an open-source LLM to generate the instruction for the black-box LLM. 
 <br>
 <br>
 
