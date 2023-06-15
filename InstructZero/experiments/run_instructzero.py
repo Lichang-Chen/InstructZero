@@ -51,7 +51,7 @@ class LMForwardAPI:
         p = torch.ones(10)
         
         kwargs={'torch_dtype': torch.float16}
-        if model_name == "vicuna":
+        if model_name in ["vicuna", "alpaca", "flan-t5"]:
             self.model = transformers.AutoModelForCausalLM.from_pretrained(
                                 HF_cache_dir, low_cpu_mem_usage=True, **kwargs
                             ).cuda()
@@ -62,23 +62,6 @@ class LMForwardAPI:
                                 padding_side='left',
                                 use_fast=False,
                             )
-        elif model_name == "alpaca":
-            self.model = transformers.AutoModelForCausalLM.from_pretrained(
-                                'chavinlo/alpaca-native',
-                            ).cuda()
-
-            self.tokenizer = transformers.AutoTokenizer.from_pretrained(
-                                'chavinlo/alpaca-native',
-                                model_max_length=512,
-                                padding_side="left",
-                                use_fast=False,
-                            )
-        elif model_name in ['google/flan-t5-large', 'google/flan-t5-xl', 'google/flan-t5-xxl', 'google/flan-t5-base']:
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=HF_cache_dir)
-            self.model = AutoModelForSeq2SeqLM.from_pretrained(
-                model_name,
-                cache_dir=HF_cache_dir
-            )
         else:
             raise NotImplementedError
 
@@ -87,34 +70,20 @@ class LMForwardAPI:
             self.embedding = self.model.get_input_embeddings().weight.clone()
             input_ids = self.tokenizer(init_prompt, return_tensors="pt").input_ids.cuda()
             self.init_prompt = self.embedding[input_ids]
-        else:
-            self.embedding = self.model.get_input_embedding()
-            self.init_prompt = self.model.embed_tokens(init_prompt).clone().cpu().to(torch.float32)
-            self.qa_prompt = self.model.embed_tokens(init_qa).clone().cpu().to(torch.float32)
             
-        ################# modify n_prompts_token #################
-        # self.n_prompt_tokens = self.init_prompt.shape[1]
+        ################# setup n_prompts_token #################
         self.n_prompt_tokens = n_prompt_tokens
         self.hidden_size = self.init_prompt.shape[-1]
         print('Shape of initial prompt embedding: {}'.format(self.init_prompt.shape))
         
-        
-        ################# modify n_prompts_token #################
         # self.init_prompt = self.init_prompt.reshape(self.n_prompt_tokens * self.hidden_size)
         self.count = 0
         self.linear = torch.nn.Linear(intrinsic_dim, self.n_prompt_tokens * self.hidden_size, bias=False)
         
         if random_proj == 'normal':
             # calculate std for normal distribution
-            if model_name in ['gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl']:
-                self.embedding = self.model.transformer.get_input_embeddings().weight.clone().cpu()
-            elif model_name in ['google/flan-t5-large', 'google/flan-t5-xl', 'google/flan-t5-xxl', 'google/flan-t5-base']: 
-                self.embedding = self.model.get_input_embeddings().weight.clone().cpu()
-            elif model_name in ['llama', 'alpaca', 'vicuna']:
+            if model_name in ['llama', 'alpaca', 'vicuna']:
                 print('Get the embedding firstly to avoid issues')
-                # if the initialization of the matrix A is based on Gaussian:
-                # embedding = self.model.get_input_embedding()
-                # mu_hat, std_hat, mu, std = self.model.get_input_embed_stats(alpha, sigma, intrinsic_dim)
             else:
                 raise NotImplementedError
             mu_hat = np.mean(self.embedding.reshape(-1).detach().cpu().numpy())
@@ -234,12 +203,6 @@ class LMForwardAPI:
 
     def return_best_prompt(self):
         return self.best_instruction
-
-    def update_count(self):
-        self.count = 0
-
-    def update_last_iter_best(self):
-        self.best_last_perf = self.best_dev_perf
 
     def return_prompts_set(self):
         return self.prompts_set
@@ -430,7 +393,7 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
             }
         },
         'evaluation': {
-            'method': exec_accuracy_evaluator, # option: likelihood, accuracy
+            'method': exec_accuracy_evaluator, # option: accuracy (cannot use likelihood here due to the textual outputs from ChatGPT do not have log prob)
             'task': task,
             'num_samples': min(100, len(test_data[0])),
             'model': {
