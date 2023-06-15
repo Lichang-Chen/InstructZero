@@ -3,13 +3,13 @@ import torch
 import numpy as np
 import copy
 from automatic_prompt_engineer import ape, data
-from experiments.data.instruction_induction.load_data import load_data, tasks
+from experiments.data.instruction_induction.load_data import load_data
 from experiments.evaluation.instruction_induction.exec_accuracy import exec_accuracy_evaluator, exec_evaluator
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+import transformers
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from automatic_prompt_engineer import evaluate, config, template, data
 import os
 import re
-import transformers
 
 from torch.quasirandom import SobolEngine
 from botorch.models import SingleTaskGP
@@ -52,11 +52,11 @@ class LMForwardAPI:
         
         kwargs={'torch_dtype': torch.float16}
         if model_name in ["vicuna", "alpaca", "flan-t5"]:
-            self.model = transformers.AutoModelForCausalLM.from_pretrained(
+            self.model = AutoModelForCausalLM.from_pretrained(
                                 HF_cache_dir, low_cpu_mem_usage=True, **kwargs
                             ).cuda()
 
-            self.tokenizer = transformers.AutoTokenizer.from_pretrained(
+            self.tokenizer = AutoTokenizer.from_pretrained(
                                 HF_cache_dir,
                                 model_max_length=512,
                                 padding_side='left',
