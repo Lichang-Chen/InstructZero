@@ -30,23 +30,14 @@ We have two folders in InstructZero:
 - experiments: contains the implementation of our pipeline and instruction-coupled kernels. 
 
 ## Installation
-- create env
+- Create env and download all the packages required as follows:
 ```
 conda create -n InstructZero
-```
-- install torch >= 1.12 (choose the version that are suitable for your machine), ours:
-```
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
-```
-- install Botorch
-```
 conda install botorch -c pytorch -c gpytorch -c conda-forge
+pip install -r requirements.txt # install other requirements
 ```
-- install other requirements
-```
-pip install -r requirements.txt
-```
-- setup APE
+- Setup APE
 ```
 cd InstructZero
 python setup.py install
