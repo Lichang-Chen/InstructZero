@@ -1,6 +1,5 @@
 import random
 import torch
-import fire
 import numpy as np
 import copy
 from automatic_prompt_engineer import ape, data
@@ -20,26 +19,16 @@ from botorch.acquisition.analytic import ExpectedImprovement
 from gpytorch.kernels import ScaleKernel, MaternKernel
 from gpytorch.priors import GammaPrior
 from instruction_coupled_kernel import *
-# from botorch.optim import optimize_acqf
 import time
 import argparse
+from misc import set_all_seed, TASKS
 
-# from botorch.test_functions import Branin
 SMOKE_TEST = os.environ.get("SMOKE_TEST")
 ## bayesian opt
 tkwargs = {
     "device": torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
     "dtype": torch.double,
 }
-
-
-
-seed = 0
-random.seed(seed)
-np.random.seed(seed)
-torch.manual_seed(seed)
-torch.cuda.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
     
     
 # Evaluation budget
@@ -49,33 +38,18 @@ BATCH_SIZE = 20 if not SMOKE_TEST else 1
 print(f"Using a total of {N_INIT + BATCH_SIZE * N_ITERATIONS} function evaluations")
 
 model_name = "vicuna"
-tasks = ['antonyms', 'cause_and_effect', 'common_concept', 'diff', 'first_word_letter',
-             'informal_to_formal', 'larger_animal', 'letters_list', 'taxonomy_animal', 'negation', 
-             'num_to_verbal', 'active_to_passive', 'singular_to_plural', 'rhymes',
-             'second_word_letter', 'sentence_similarity', 'sentiment', 'orthography_starts_with',
-             'sum', 'synonyms', 'translation_en-de', 'translation_en-es',
-             'translation_en-fr', 'word_in_context', 'auto_categorization', 'auto_debugging', 'ascii', 'cs_algorithms',
-             'periodic_elements', 'word_sorting', 'word_unscrambling', 'odd_one_out', 'object_count']
-
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-device = 'cuda:0'
-# random_proj = 'normal'
-# api_model = 'flan-t5'
 api_model = 'chatgpt'
-HF_cache_dir='/data/bobchen/vicuna-13b'
-## some parameters:
-# change the instrinsic dimension here.
-# intrinsic_dim = 5
 alpha = 1
 sigma = 1
 
     
 class LMForwardAPI:
-    def __init__(self, model_name=None, eval_data=None, init_prompt=None, init_qa=None, conf=None, base_conf=None,
-                 prompt_gen_data=None, random_proj=None, intrinsic_dim=None, n_prompt_tokens=None, few_shot_data=None):
+    def __init__(self, model_name='vicuna', eval_data=None, init_prompt=None, init_qa=None, conf=None, base_conf=None,
+                 prompt_gen_data=None, random_proj=None, intrinsic_dim=None, n_prompt_tokens=None, few_shot_data=None, 
+                 HF_cache_dir=None):
         p = torch.ones(10)
         
-        HF_cache_dir='/data/bobchen/vicuna-13b'
         kwargs={'torch_dtype': torch.float16}
         if model_name == "vicuna":
             self.model = transformers.AutoModelForCausalLM.from_pretrained(
@@ -109,7 +83,6 @@ class LMForwardAPI:
             raise NotImplementedError
 
         self.init_token = init_prompt[0] + init_qa[0]
-        # import pdb; pdb.set_trace()
         if model_name in ['alpaca', 'vicuna']:
             self.embedding = self.model.get_input_embeddings().weight.clone()
             input_ids = self.tokenizer(init_prompt, return_tensors="pt").input_ids.cuda()
@@ -128,8 +101,6 @@ class LMForwardAPI:
         
         ################# modify n_prompts_token #################
         # self.init_prompt = self.init_prompt.reshape(self.n_prompt_tokens * self.hidden_size)
-        
-        
         self.count = 0
         self.linear = torch.nn.Linear(intrinsic_dim, self.n_prompt_tokens * self.hidden_size, bias=False)
         
@@ -253,10 +224,6 @@ class LMForwardAPI:
             self.best_prompt = copy.deepcopy(tmp_prompt)
             self.best_instruction = instruction
 
-        # if self.save_path is not None:
-        #     with open(os.path.join(self.save_path, 'dev_acc.txt'), 'a') as fout:
-        #         fout.write('{}\t{}\n'.format(self.num_call, dev_loss))
-
         print('Dev loss: {}. Dev perf: {}. Best dev perf: {}'.format(
             round(float(dev_perf), 4),
             round(float(dev_perf), 4),
@@ -277,8 +244,8 @@ class LMForwardAPI:
     def return_prompts_set(self):
         return self.prompts_set
     
-def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
-    assert task in tasks, 'Task not found!'
+def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
+    assert task in TASKS, 'Task not found!'
 
     induce_data, test_data = load_data('induce', task), load_data('eval', task)
 
@@ -332,7 +299,8 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
 
     
     model_forward_api = LMForwardAPI(model_name=model_name, eval_data=eval_data, init_prompt=init_prompt, 
-                                    init_qa=init_qa, conf=conf, base_conf=base_conf, prompt_gen_data=prompt_gen_data, random_proj=random_proj, intrinsic_dim=intrinsic_dim, n_prompt_tokens=n_prompt_tokens)
+                                    init_qa=init_qa, conf=conf, base_conf=base_conf, prompt_gen_data=prompt_gen_data, random_proj=random_proj, 
+                                    intrinsic_dim=intrinsic_dim, n_prompt_tokens=n_prompt_tokens, HF_cache_dir=HF_cache_dir)
     
         
     # start bayesian opt
@@ -446,7 +414,6 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens):
 
     print("The final instruction set is:")
     print(model_forward_api.return_prompts_set())
-    # print('Test acc: {}'.format(round(test_acc, 4)))
 
     # Evaluate on test data
     print('Evaluating on test data...')
@@ -513,17 +480,32 @@ def parse_args():
         default=5,
         help="The number of prompt tokens."
     )
+    parser.add_argument(
+        "--HF_cache_dir",
+        type=str,
+        default="/data/bobchen/vicuna-13b",
+        help="Your vicuna directory"
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=0,
+        help="Set the seed."    
+    )
     args = parser.parse_args()
     return args
 
 if __name__ == '__main__':
     args = parse_args()
+    print(set_all_seed(args.seed))
     test_score = run(
         task=args.task,
         random_proj=args.random_proj, 
-        instrinsic_dim=args.instrinsic_dim,
-        n_prompt_tokens=args.n_prompt_tokens
+        intrinsic_dim=args.intrinsic_dim,
+        n_prompt_tokens=args.n_prompt_tokens,
+        HF_cache_dir=args.HF_cache_dir
     )
+    
     print("Finished!!!")
     print(f'Test score on ChatGPT: {test_score}')
 
