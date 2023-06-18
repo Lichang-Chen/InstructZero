@@ -176,7 +176,6 @@ class LMForwardAPI:
         else:
             if api_model in ['chatgpt']: 
                 dev_perf, instruction_score = evaluate.evaluate_prompts(instruction, self.eval_template, self.eval_data, self.demos_template, self.few_shot_data, self.conf['evaluation']['method'], self.conf['evaluation'])
-                import pdb; pdb.set_trace()
                 dev_perf = dev_perf.sorted()[1][0]
                 self.prompts_set[instruction[0]] = (dev_perf, instruction_score)
             # We will fix the bugs for other api models. Stay tuned!
