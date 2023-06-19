@@ -60,6 +60,7 @@ Here we introduce the hyperparameters in our algorithm.
 ## Frequently Asked Questions
 - API LLMs and open-source LLMs support: currently, we only support for Vicuna-13b and GPT-3.5-turbo (ChatGPT), respectively. We will support more models in the next month (July). Current Plan: WizardLM-13b for open-source models and Claude, GPT-4 for API LLMs.
 - Why is the performance of [APE](https://github.com/keirp/automatic_prompt_engineer) quite poor on ChatGPT? Answer: we only have access to the textual output from the black-box LLM, e.g., ChatGPT. So we could not calculate the log probability as the score function in InstructZero as original APE.
+- Cost for calling ChatGPT API: On the single dataset(e.g., EN-DE dataset), the estimated cost is $1.5. We will merge the cost computation function into our repo. Stay tuned!
 
 ## Comments
 Our codebase is based on the following repo:
