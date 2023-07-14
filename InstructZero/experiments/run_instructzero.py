@@ -373,12 +373,6 @@ if __name__ == '__main__':
     print(f"Using a total of {N_INIT + BATCH_SIZE * N_ITERATIONS} function evaluations")
     print(set_all_seed(args.seed))
     test_score = run(args=args)
-        # task=args.task,
-        # random_proj=args.random_proj, 
-        # intrinsic_dim=args.intrinsic_dim,
-        # n_prompt_tokens=args.n_prompt_tokens,
-        # HF_cache_dir=args.HF_cache_dir
-    
     print("Finished!!!")
     print(f'Test score on ChatGPT: {test_score}')
 
