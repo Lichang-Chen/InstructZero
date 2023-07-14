@@ -25,9 +25,7 @@ import argparse
 from misc import set_all_seed, TASKS, tkwargs, N_INIT, BATCH_SIZE, N_ITERATIONS
 from args import parse_args
 
-# model_name = "vicuna"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-# api_model = 'chatgpt'
 
     
 class LMForwardAPI:
