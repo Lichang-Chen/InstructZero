@@ -2,3 +2,4 @@ InstructZero/automatic_prompt_engineer.egg-info
 InstructZero/build
 InstructZero/dist
 .vscode/
+InstructZero/experiments/__pycache__

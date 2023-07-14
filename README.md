@@ -13,6 +13,8 @@ Find the optimal instruction is extremely important for achieving the "charm", a
 <br>
 
 If you have any questions, feel free to email the correspondence authors: Lichang Chen and Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
+## News
++ [2023.7] We just got the Claude API key and our code will support GPT-4 and Claude(as API LLMs), WizardLM-13B and 30B~(as open-sourced LLMs) in the next week!
 
 ## About
 We propose a new kind of Alignment! The optimization process in our method is like aligning human with LLMs. (Compared to ours, instruction finetuning is more like aligning LLMs with human.) It is also the first framework to optimize the bad prompts for ChatGPT and finally obtain good prompts.
@@ -56,6 +58,11 @@ bash experiments/run_instructzero.sh
 Here we introduce the hyperparameters in our algorithm.
 - instrinsic_dim: the dimension of the projection matrix, default=10
 - soft tokens: the length of the tunable prompt embeddings, you can choose from [3, 10]
+
+## Frequently Asked Questions
+- API LLMs and open-source LLMs support: currently, we only support for Vicuna-13b and GPT-3.5-turbo (ChatGPT), respectively. We will support more models in the next month (July). Current Plan: WizardLM-13b for open-source models and Claude, GPT-4 for API LLMs.
+- Why is the performance of [APE](https://github.com/keirp/automatic_prompt_engineer) quite poor on ChatGPT? Answer: we only have access to the textual output from the black-box LLM, e.g., ChatGPT. So we could not calculate the log probability as the score function in InstructZero as original APE.
+- Cost for calling ChatGPT API: On the single dataset(e.g., EN-DE dataset), the estimated cost is $1.5. We will merge the cost computation function into our repo. Stay tuned!
 
 ## Comments
 Our codebase is based on the following repo:
