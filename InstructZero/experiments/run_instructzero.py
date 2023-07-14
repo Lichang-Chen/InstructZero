@@ -29,13 +29,13 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
     
 class LMForwardAPI:
-    def __init__(self, model_name='vicuna', eval_data=None, init_prompt=None, init_qa=None, conf=None, base_conf=None,
+    def __init__(self, model_name=None, eval_data=None, init_prompt=None, init_qa=None, conf=None, base_conf=None,
                  prompt_gen_data=None, random_proj=None, intrinsic_dim=None, n_prompt_tokens=None, few_shot_data=None, 
                  HF_cache_dir=None, args=None):
         p = torch.ones(10)
         
         kwargs={'torch_dtype': torch.float16}
-        if model_name in ["vicuna", "alpaca", "flan-t5"]:
+        if model_name in ["vicuna", "wizardlm", 'openchat']:
             self.model = AutoModelForCausalLM.from_pretrained(
                                 HF_cache_dir, low_cpu_mem_usage=True, **kwargs
                             ).cuda()
@@ -43,7 +43,7 @@ class LMForwardAPI:
             self.tokenizer = AutoTokenizer.from_pretrained(
                                 HF_cache_dir,
                                 model_max_length=512,
-                                padding_side='left',
+                                padding_side="left",
                                 use_fast=False,
                             )
         else:
