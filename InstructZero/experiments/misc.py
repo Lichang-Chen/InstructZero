@@ -2,6 +2,7 @@ import torch
 import random
 import numpy as np
 from experiments.evaluation.instruction_induction.exec_accuracy import exec_accuracy_evaluator
+import os
 
 TASKS=[
     'antonyms', 'cause_and_effect', 'common_concept', 'diff', 'first_word_letter',
@@ -12,6 +13,20 @@ TASKS=[
     'translation_en-fr', 'word_in_context', 'auto_categorization', 'auto_debugging', 'ascii', 'cs_algorithms',
     'periodic_elements', 'word_sorting', 'word_unscrambling', 'odd_one_out', 'object_count'
 ]
+
+
+SMOKE_TEST = os.environ.get("SMOKE_TEST")
+## bayesian opt
+tkwargs = {
+    "device": torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
+    "dtype": torch.double,
+}
+
+
+N_INIT = 40
+N_ITERATIONS = 4 if not SMOKE_TEST else 1
+BATCH_SIZE = 20 if not SMOKE_TEST else 1
+
 
 def get_test_conf(task, test_data):
     test_conf={

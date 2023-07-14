@@ -22,33 +22,18 @@ from gpytorch.priors import GammaPrior
 from instruction_coupled_kernel import *
 import time
 import argparse
-from misc import set_all_seed, TASKS
+from misc import set_all_seed, TASKS, tkwargs, N_INIT, BATCH_SIZE, N_ITERATIONS
+from args import parse_args
 
-SMOKE_TEST = os.environ.get("SMOKE_TEST")
-## bayesian opt
-tkwargs = {
-    "device": torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
-    "dtype": torch.double,
-}
-    
-    
-# Evaluation budget
-N_INIT = 40
-N_ITERATIONS = 4 if not SMOKE_TEST else 1
-BATCH_SIZE = 20 if not SMOKE_TEST else 1
-print(f"Using a total of {N_INIT + BATCH_SIZE * N_ITERATIONS} function evaluations")
-
-model_name = "vicuna"
+# model_name = "vicuna"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-api_model = 'chatgpt'
-alpha = 1
-sigma = 1
+# api_model = 'chatgpt'
 
     
 class LMForwardAPI:
     def __init__(self, model_name='vicuna', eval_data=None, init_prompt=None, init_qa=None, conf=None, base_conf=None,
                  prompt_gen_data=None, random_proj=None, intrinsic_dim=None, n_prompt_tokens=None, few_shot_data=None, 
-                 HF_cache_dir=None):
+                 HF_cache_dir=None, args=None):
         p = torch.ones(10)
         
         kwargs={'torch_dtype': torch.float16}
@@ -90,7 +75,7 @@ class LMForwardAPI:
             mu_hat = np.mean(self.embedding.reshape(-1).detach().cpu().numpy())
             std_hat = np.std(self.embedding.reshape(-1).detach().cpu().numpy())
             mu = 0.0
-            std = alpha * std_hat / (np.sqrt(intrinsic_dim) * sigma)
+            std = args.alpha * std_hat / (np.sqrt(intrinsic_dim) * args.sigma)
 
             print('[Embedding] mu: {} | std: {} [RandProj]  mu: {} | std: {}'.format(mu_hat, std_hat, mu, std))
             for p in self.linear.parameters():   
@@ -105,8 +90,8 @@ class LMForwardAPI:
         self.eval_template = template.EvalTemplate("Instruction: [PROMPT]\n\nInput: [INPUT]\n Output: [OUTPUT]")
         self.demos_template = template.DemosTemplate("Input: [INPUT]\nOutput: [OUTPUT]")
         
-        if api_model in ['llama', 'flan-t5']:
-            self.api_model = exec_evaluator(api_model, self.conf)
+        if args.api_model in ['llama', 'flan-t5']:
+            self.api_model = exec_evaluator(args.api_model, self.conf)
 
         if few_shot_data is None:
             self.few_shot_data = prompt_gen_data
@@ -175,7 +160,7 @@ class LMForwardAPI:
         if instruction[0] in self.prompts_set.keys():
             (dev_perf, instruction_score) = self.prompts_set[instruction[0]]
         else:
-            if api_model in ['chatgpt']: 
+            if self.api_model in ['chatgpt']: 
                 dev_perf, instruction_score = evaluate.evaluate_prompts(instruction, self.eval_template, self.eval_data, self.demos_template, self.few_shot_data, self.conf['evaluation']['method'], self.conf['evaluation'])
                 dev_perf = dev_perf.sorted()[1][0]
                 self.prompts_set[instruction[0]] = (dev_perf, instruction_score)
@@ -209,8 +194,11 @@ class LMForwardAPI:
     def return_prompts_set(self):
         return self.prompts_set
     
-def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
-    assert task in TASKS, 'Task not found!'
+def run(args):
+    task, HF_cache_dir=args.task, args.HF_cache_dir
+    random_proj, intrinsic_dim, n_prompt_tokens= args.random_proj, args.instrinsic_dim, args.n_prompt_tokens
+
+    assert args.task in TASKS, 'Task not found!'
 
     induce_data, test_data = load_data('induce', task), load_data('eval', task)
 
@@ -242,9 +230,9 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
     init_qa = [prompt_gen_template.fill(demos)]
 
     
-    model_forward_api = LMForwardAPI(model_name=model_name, eval_data=eval_data, init_prompt=init_prompt, 
+    model_forward_api = LMForwardAPI(model_name=args.model_name, eval_data=eval_data, init_prompt=init_prompt, 
                                     init_qa=init_qa, conf=conf, base_conf=base_conf, prompt_gen_data=prompt_gen_data, random_proj=random_proj, 
-                                    intrinsic_dim=intrinsic_dim, n_prompt_tokens=n_prompt_tokens, HF_cache_dir=HF_cache_dir)
+                                    intrinsic_dim=intrinsic_dim, n_prompt_tokens=n_prompt_tokens, HF_cache_dir=HF_cache_dir, args=args)
     
         
     # start bayesian opt
@@ -376,69 +364,18 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
     return test_score
     # print(f'Test score on ChatGPT: {test_score}')
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="InstructZero pipeline")
-    parser.add_argument(
-        "--task",
-        type=str,
-        default=None,
-        help="The name of the dataset to use (via the datasets library).",
-    )
-    parser.add_argument(
-        "--random_proj",
-        type=str,
-        default="uniform",
-        help="The initialization of the projection matrix A."
-    )
-    parser.add_argument(
-        "--intrinsic_dim",
-        type=int,
-        default=10,
-        help="The instrinsic dimension of the projection matrix"
-    )
-    parser.add_argument(
-        "--n_prompt_tokens",
-        type=int,
-        default=5,
-        help="The number of prompt tokens."
-    )
-    parser.add_argument(
-        "--HF_cache_dir",
-        type=str,
-        default="/data/bobchen/vicuna-13b",
-        help="Your vicuna directory"
-    )
-    parser.add_argument(
-        "--seed",
-        type=int,
-        default=0,
-        help="Set the seed."    
-    )
-    parser.add_argument(
-        "--alpha",
-        type=int,
-        default=1.0,
-        help="Set the alpha if the initialization of the projection matrix A is std."    
-    )
-    parser.add_argument(
-        "--beta",
-        type=int,
-        default=3.0,
-        help="Set the beta if the initialization of the projection matrix A is std."    
-    )
-    args = parser.parse_args()
-    return args
 
 if __name__ == '__main__':
     args = parse_args()
+    # evaluation budget
+    print(f"Using a total of {N_INIT + BATCH_SIZE * N_ITERATIONS} function evaluations")
     print(set_all_seed(args.seed))
-    test_score = run(
-        task=args.task,
-        random_proj=args.random_proj, 
-        intrinsic_dim=args.intrinsic_dim,
-        n_prompt_tokens=args.n_prompt_tokens,
-        HF_cache_dir=args.HF_cache_dir
-    )
+    test_score = run(args=args)
+        # task=args.task,
+        # random_proj=args.random_proj, 
+        # intrinsic_dim=args.intrinsic_dim,
+        # n_prompt_tokens=args.n_prompt_tokens,
+        # HF_cache_dir=args.HF_cache_dir
     
     print("Finished!!!")
     print(f'Test score on ChatGPT: {test_score}')
