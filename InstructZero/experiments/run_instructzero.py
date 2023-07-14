@@ -196,7 +196,7 @@ class LMForwardAPI:
     
 def run(args):
     task, HF_cache_dir=args.task, args.HF_cache_dir
-    random_proj, intrinsic_dim, n_prompt_tokens= args.random_proj, args.instrinsic_dim, args.n_prompt_tokens
+    random_proj, intrinsic_dim, n_prompt_tokens= args.random_proj, args.intrinsic_dim, args.n_prompt_tokens
 
     assert args.task in TASKS, 'Task not found!'
 

@@ -56,5 +56,11 @@ def parse_args():
         default='chatgpt',
         help="The black-box api model."    
     )
+    parser.add_argument(
+        "--model_name",
+        type=str,
+        default='vicuna',
+        help="The model name of the open-source LLM."    
+    )
     args = parser.parse_args()
     return args
