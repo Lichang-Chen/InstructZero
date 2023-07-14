@@ -11,5 +11,5 @@ for i in ${datasets[@]}; do
     --task $i \
     --random_proj ${RANDOM_PROJ} \
     --n_prompt_tokens $SFT \
-    --intrinsic_dim $INTRINSIC_DIM
+    --intrinsic_dim $INTRINSIC_DIM 
 done

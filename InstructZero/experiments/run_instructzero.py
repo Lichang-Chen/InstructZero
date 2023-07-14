@@ -10,6 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from automatic_prompt_engineer import evaluate, config, template, data
 import os
 import re
+from misc import get_test_conf, get_conf
 
 from torch.quasirandom import SobolEngine
 from botorch.models import SingleTaskGP
@@ -231,28 +232,7 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
     prompt_gen_template = "[full_DEMO]\n\nThe instruction was to"
 
     base_conf = '../experiments/configs/instruction_induction.yaml'
-    conf = {
-        'generation': {
-            'num_subsamples': 1,
-            'num_demos': 5,
-            'num_prompts_per_subsample': 20,
-            'model': {
-                'gpt_config': {
-                    # 'model': 'text-ada-001'
-                }
-            }
-        },
-        'evaluation': {
-            'method': exec_accuracy_evaluator,
-            'task': task,
-            'num_samples': min(20, len(eval_data[0])),
-            'model': {
-                'gpt_config': {
-                    # 'model': 'text-ada-001'
-                }
-            }
-        }
-    }
+    conf = get_conf(task, eval_data)
 
     # make the demo automatically
     subsampled_data = data.subsample_data(prompt_gen_data, conf['generation']['num_demos'])
@@ -382,29 +362,7 @@ def run(task, random_proj, intrinsic_dim, n_prompt_tokens, HF_cache_dir):
     # Evaluate on test data
     print('Evaluating on test data...')
 
-    test_conf = {
-        'generation': {
-            'num_subsamples': 3,
-            'num_demos': 5,
-            'num_prompts_per_subsample': 0,
-            'model': {
-                'gpt_config': {
-                    # 'model': 'text-ada-001'
-                }
-            }
-        },
-        'evaluation': {
-            'method': exec_accuracy_evaluator, # option: accuracy (cannot use likelihood here due to the textual outputs from ChatGPT do not have log prob)
-            'task': task,
-            'num_samples': min(100, len(test_data[0])),
-            'model': {
-                "name": "GPT_forward",
-                'gpt_config': {
-                   'model': 'GPT-3.5-turbo',
-                }
-            }
-        }
-    }
+    test_conf = get_test_conf(task, test_data)
     
     test_res = ape.evaluate_prompts(prompts=prompts,
                                     eval_template=eval_template,
@@ -455,6 +413,18 @@ def parse_args():
         type=int,
         default=0,
         help="Set the seed."    
+    )
+    parser.add_argument(
+        "--alpha",
+        type=int,
+        default=1.0,
+        help="Set the alpha if the initialization of the projection matrix A is std."    
+    )
+    parser.add_argument(
+        "--beta",
+        type=int,
+        default=3.0,
+        help="Set the beta if the initialization of the projection matrix A is std."    
     )
     args = parser.parse_args()
     return args
