@@ -89,9 +89,11 @@ class LMForwardAPI:
         self.eval_data = eval_data
         self.eval_template = template.EvalTemplate("Instruction: [PROMPT]\n\nInput: [INPUT]\n Output: [OUTPUT]")
         self.demos_template = template.DemosTemplate("Input: [INPUT]\nOutput: [OUTPUT]")
-        
+    
         if args.api_model in ['llama', 'flan-t5']:
             self.api_model = exec_evaluator(args.api_model, self.conf)
+        else:
+            self.api_model = args.api_model
 
         if few_shot_data is None:
             self.few_shot_data = prompt_gen_data
