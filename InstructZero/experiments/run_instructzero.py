@@ -4,8 +4,6 @@ import numpy as np
 import copy
 from automatic_prompt_engineer import ape, data
 from experiments.data.instruction_induction.load_data import load_data
-from experiments.evaluation.instruction_induction.exec_accuracy import exec_accuracy_evaluator, exec_evaluator
-import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from automatic_prompt_engineer import evaluate, config, template, data
 import os
