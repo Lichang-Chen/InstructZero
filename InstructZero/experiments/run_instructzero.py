@@ -34,15 +34,20 @@ class LMForwardAPI:
                  HF_cache_dir=None, args=None):
         p = torch.ones(10)
         
-        kwargs={'torch_dtype': torch.float16}
-        if model_name in ["vicuna", "wizardlm", 'openchat']:
+        kwargs={
+            'torch_dtype': torch.float16,
+            'use_cache': True
+            }
+        self.ops_model = model_name
+        import pdb; pdb.set_trace()
+        if self.ops_model in ["vicuna", "wizardlm", 'openchat']:
             self.model = AutoModelForCausalLM.from_pretrained(
                                 HF_cache_dir, low_cpu_mem_usage=True, **kwargs
                             ).cuda()
 
             self.tokenizer = AutoTokenizer.from_pretrained(
                                 HF_cache_dir,
-                                model_max_length=512,
+                                model_max_length=1024,
                                 padding_side="left",
                                 use_fast=False,
                             )
@@ -50,7 +55,7 @@ class LMForwardAPI:
             raise NotImplementedError
 
         self.init_token = init_prompt[0] + init_qa[0]
-        if model_name in ['alpaca', 'vicuna']:
+        if self.ops_model in ['wizardlm', 'vicuna', 'openchat']:
             self.embedding = self.model.get_input_embeddings().weight.clone()
             input_ids = self.tokenizer(init_prompt, return_tensors="pt").input_ids.cuda()
             self.init_prompt = self.embedding[input_ids]
@@ -61,12 +66,25 @@ class LMForwardAPI:
         print('Shape of initial prompt embedding: {}'.format(self.init_prompt.shape))
         
         # self.init_prompt = self.init_prompt.reshape(self.n_prompt_tokens * self.hidden_size)
+        # Create the template for Vicuna and WizardLM
         self.count = 0
         self.linear = torch.nn.Linear(intrinsic_dim, self.n_prompt_tokens * self.hidden_size, bias=False)
-        
+        if self.ops_model == 'vicuna':
+            self.system_prompt = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
+            self.role = ['USER:', 'ASSISTANT:']
+        elif self.ops_model == 'wizardlm':
+            self.system_prompt = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
+            self.role = ['USER:', 'ASSISTANT:']
+        elif self.ops_model == 'alpaca':
+            self.system_prompt= "Below is an instruction that describes a task. Write a response that appropriately completes the request."
+            self.role = ["### Instruction:", "### Response:"]
+        else:
+            NotImplementedError
+            
+
         if random_proj == 'normal':
             # calculate std for normal distribution
-            if model_name in ['llama', 'alpaca', 'vicuna']:
+            if model_name in ['wizardlm', 'vicuna', 'openchat']:
                 print('Get the embedding firstly to avoid issues')
             else:
                 raise NotImplementedError
@@ -87,11 +105,12 @@ class LMForwardAPI:
         self.eval_data = eval_data
         self.eval_template = template.EvalTemplate("Instruction: [PROMPT]\n\nInput: [INPUT]\n Output: [OUTPUT]")
         self.demos_template = template.DemosTemplate("Input: [INPUT]\nOutput: [OUTPUT]")
-    
-        if args.api_model in ['llama', 'flan-t5']:
-            self.api_model = exec_evaluator(args.api_model, self.conf)
-        else:
-            self.api_model = args.api_model
+
+        # Temporarily remove the API model "LLaMA-33B" and "Flan-T5 13B" 
+        # if args.api_model in ['llama', 'flan-t5']:
+        #     self.api_model = exec_evaluator(args.api_model, self.conf)
+        # else:
+        self.api_model = args.api_model
 
         if few_shot_data is None:
             self.few_shot_data = prompt_gen_data
@@ -130,29 +149,31 @@ class LMForwardAPI:
             raise ValueError(
                 f'[Prompt Embedding] Only support [list, numpy.ndarray], got `{type(prompt_embedding)}` instead.'
             )
-
-        input_ids = self.tokenizer(self.init_token, return_tensors="pt").input_ids.cuda()
+        # create the input text with the system prompt  
+        input_text = f"{self.system_prompt} USER:{self.init_token} ASSISTANT:"
+        input_ids = self.tokenizer(input_text, return_tensors="pt").input_ids.cuda()
         input_embed = self.embedding[input_ids]
         prompt_embedding = prompt_embedding.to(device=input_embed.device, dtype=input_embed.dtype)
         input_embed = torch.cat((prompt_embedding, input_embed), 1)
-        outputs = self.model.generate(inputs_embeds=input_embed, max_new_tokens=64)
-        instruction = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
-        
-        # postprocess instruction
-        instruction[0] = 'The instruction was to ' + instruction[0]
-        start = instruction[0].find('The instruction was to')
-        end = instruction[0].find('Comment:')
-        if end == -1:
-            instruction[0] = instruction[0][start:]
-        else:
-            instruction[0] = instruction[0][start: end]
 
-        sentences = re.split(r' *[\.\?!][\'"\)\]]* *', instruction[0])
-        search_string = 'The instruction was to'
-        for sentence in sentences:
-            if sentence.startswith(search_string):
-                instruction[0] = sentence
-                break
+        outputs = self.model.generate(inputs_embeds=input_embed, max_new_tokens=128)
+        instruction = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
+        # postprocess instruction
+        # instruction[0] = 'The instruction was to ' + instruction[0]
+        # import pdb; pdb.set_trace()
+        # start = instruction[0].find('The instruction was to')
+        # end = instruction[0].find('Comment:')
+        # if end == -1:
+        #     instruction[0] = instruction[0][start:]
+        # else:
+        #     instruction[0] = instruction[0][start: end]
+
+        # sentences = re.split(r' *[\.\?!][\'"\)\]]* *', instruction[0])
+        # search_string = 'The instruction was to'
+        # for sentence in sentences:
+        #     if sentence.startswith(search_string):
+        #         instruction[0] = sentence
+        #         break
 
         # print post-processed instruction
         print('Instruction: {}'.format(instruction))
@@ -217,7 +238,9 @@ def run(args):
     demos_template = "Input: [INPUT]\nOutput: [OUTPUT]"
     eval_template = "Instruction: [PROMPT]\n\nInput: [INPUT]\n\nOUTPUT: [OUTPUT]" # change the evaluation template
     init_prompt = ['\n']
-    prompt_gen_template = "[full_DEMO]\n\nThe instruction was to"
+    prompt_gen_template = "[full_DEMO]\n\nThe instruction was to?"
+    # prompt_gen_template = "[full_DEMO]\n\nWhat was the instruction for the task?"
+    # prompt_gen_template = "[full_DEMO]\n\n Please generate appropriate instructions for the task."
 
     base_conf = '../experiments/configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
