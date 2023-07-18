@@ -19,7 +19,7 @@ from gpytorch.kernels import ScaleKernel, MaternKernel
 from gpytorch.priors import GammaPrior
 from instruction_coupled_kernel import *
 import time
-import argparse
+
 from misc import set_all_seed, TASKS, tkwargs, N_INIT, BATCH_SIZE, N_ITERATIONS
 from args import parse_args
 
