@@ -4,7 +4,7 @@ def subsample_data(data, subsample_size):
     """
     Subsample data. Data is in the form of a tuple of lists.
     """
-    random.seed(SEED)
+    #random.seed(SEED)
     inputs, outputs = data
     assert len(inputs) == len(outputs)
     indices = random.sample(range(len(inputs)), subsample_size)
