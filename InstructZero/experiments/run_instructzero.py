@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import copy
 from automatic_prompt_engineer import ape, data
-from experiments.data.instruction_induction.load_data import load_data
+from data.instruction_induction.load_data import load_data
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from automatic_prompt_engineer import evaluate, config, template, data
 import os

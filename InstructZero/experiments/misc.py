@@ -1,7 +1,7 @@
 import torch
 import random
 import numpy as np
-from experiments.evaluation.instruction_induction.exec_accuracy import exec_accuracy_evaluator
+from evaluation.instruction_induction.exec_accuracy import exec_accuracy_evaluator
 import os
 
 TASKS=[

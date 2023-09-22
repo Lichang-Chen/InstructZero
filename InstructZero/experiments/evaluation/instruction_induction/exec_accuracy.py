@@ -1,7 +1,7 @@
 import numpy as np
 
 from automatic_prompt_engineer import data, llm, evaluate
-from experiments.evaluation.instruction_induction import utility
+from evaluation.instruction_induction import utility
 
 
 def get_query(prompt, eval_template, input_, output_, demo_data, demos_template):
