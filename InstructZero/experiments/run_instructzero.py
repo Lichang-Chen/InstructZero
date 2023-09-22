@@ -40,8 +40,11 @@ class LMForwardAPI:
         # import pdb; pdb.set_trace()
         if self.ops_model in ["vicuna", "wizardlm", 'openchat']:
             self.model = AutoModelForCausalLM.from_pretrained(
-                                HF_cache_dir, low_cpu_mem_usage=True, **kwargs
-                            ).cuda()
+                HF_cache_dir,
+                low_cpu_mem_usage=True,
+                device_map="auto",
+                **kwargs,
+            )
 
             self.tokenizer = AutoTokenizer.from_pretrained(
                                 HF_cache_dir,
