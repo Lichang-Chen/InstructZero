@@ -37,7 +37,7 @@ class LMForwardAPI:
             'use_cache': True
             }
         self.ops_model = model_name
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace()
         if self.ops_model in ["vicuna", "wizardlm", 'openchat']:
             self.model = AutoModelForCausalLM.from_pretrained(
                                 HF_cache_dir, low_cpu_mem_usage=True, **kwargs
