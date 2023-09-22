@@ -89,17 +89,15 @@ class LMForwardAPI:
                 print('Get the embedding firstly to avoid issues')
             else:
                 raise NotImplementedError
-            mu_hat = np.mean(self.embedding.reshape(-1).detach().cpu().numpy())
-            std_hat = np.std(self.embedding.reshape(-1).detach().cpu().numpy())
+            mu_hat = self.embedding.reshape(-1).mean().item()
+            std_hat = self.embedding.reshape(-1).std().item()
             mu = 0.0
             std = args.alpha * std_hat / (np.sqrt(intrinsic_dim) * args.sigma)
 
             print('[Embedding] mu: {} | std: {} [RandProj]  mu: {} | std: {}'.format(mu_hat, std_hat, mu, std))
-            for p in self.linear.parameters():   
-                torch.nn.init.uniform_(p, -1, 1)
+            torch.nn.init.normal_(self.linear.weight, -1, 1)
         elif random_proj == 'uniform':  
-            for p in self.linear.parameters():   
-                torch.nn.init.uniform_(p, -1, 1)
+            torch.nn.init.uniform_(self.linear.weight, -1, 1)
 
         ## eval preparation
         self.conf = config.update_config(conf, base_conf)
