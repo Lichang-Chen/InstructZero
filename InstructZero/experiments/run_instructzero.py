@@ -272,7 +272,7 @@ def run(args):
 
     # standardization Y (no standardization for X)
     X_train = X
-    y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2))
+    y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2) + 1e-9)
 
     # define matern kernel
     matern_kernel = MaternKernel(
@@ -303,7 +303,7 @@ def run(args):
         start_time = time.time()
         EI = ExpectedImprovement(gp_model, best_f = y_train.max().item())
         
-        starting_idxs = torch.argsort(-1*y_train)[:BATCH_SIZE]
+        starting_idxs = torch.argsort(-1*y_train.squeeze())[:BATCH_SIZE]
         starting_points = X_train[starting_idxs]
 
 
@@ -338,7 +338,7 @@ def run(args):
 
         # standardization Y
         X_train = X.clone()
-        y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2))
+        y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2) + 1e-9)
 
         
         matern_kernel = MaternKernel(
