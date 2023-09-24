@@ -16,7 +16,7 @@ If you have any questions, feel free to email the correspondence authors: Lichan
 ## News
 + [2023.7] We just got the Claude API key and our code will support GPT-4 and Claude(as API LLMs), WizardLM-13B and 30B~(as open-sourced LLMs) in the next week!
 + [2023.7] Now our code support vicuna-v1.3 models and WizardLM-v1.1 models as open-source LLMs.
-+ [2023.7] Introducing AlpaGasus 🦙 [Paper](https://arxiv.org/abs/2307.08701), [Webpage](https://lichang-chen.github.io/AlpaGasus/) - making LLM instruction-finetuning smarter, not harder, using fewer data. We uses ChatGPT to select only 9k high-quality data from Alpaca's 52k data. The 9k data lead to Faster training time (5.7x ⏩), better performance (matching >90% of Text-Davinci-003).
++ [2023.7] Introducing AlpaGasus 🦙 [Paper](https://arxiv.org/abs/2307.08701), [Webpage](https://lichang-chen.github.io/AlpaGasus/), [Code 1(FSDP)](https://github.com/gpt4life/alpagasus), [Code 2(Qlora)](https://github.com/gauss5930/AlpaGasus2-QLoRA) - making LLM instruction-finetuning smarter, not harder, using fewer data. We uses ChatGPT to select only 9k high-quality data from Alpaca's 52k data. The 9k data lead to Faster training time (5.7x ⏩), better performance (matching >90% of Text-Davinci-003).
 
 ## About
 We propose a new kind of Alignment! The optimization process in our method is like aligning human with LLMs. (Compared to ours, instruction finetuning is more like aligning LLMs with human.) It is also the first framework to optimize the bad prompts for ChatGPT and finally obtain good prompts.
