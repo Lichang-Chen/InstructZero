@@ -40,7 +40,7 @@ class CombinedStringKernel(Kernel):
             K_z2_training = self.base_latent_kernel.forward(latent_train_z2, self.latent_train, **params)
             latent_space_kernel_inv = torch.inverse(latent_space_kernel + 0.0001 * torch.eye(len(self.latent_train)).to(latent_space_kernel.device))
 
-            kernel_val = K_z1_training @ latent_space_kernel_inv.T @ (K_train_instruction) @ latent_space_kernel_inv  @ K_z2_training.T
+            kernel_val = K_z1_training @ latent_space_kernel_inv @ (K_train_instruction) @ latent_space_kernel_inv @ K_z2_training.T
             if check_dim > 0:
                 kernel_val = kernel_val.unsqueeze(1)
             return kernel_val

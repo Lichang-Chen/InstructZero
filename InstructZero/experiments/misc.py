@@ -23,9 +23,9 @@ tkwargs = {
 }
 
 
-N_INIT = 20
-N_ITERATIONS = 2 if not SMOKE_TEST else 1
-BATCH_SIZE = 10 if not SMOKE_TEST else 1
+N_INIT = 25
+N_ITERATIONS = 5 if not SMOKE_TEST else 1
+BATCH_SIZE = 25 if not SMOKE_TEST else 1
 
 
 def get_test_conf(task, test_data):

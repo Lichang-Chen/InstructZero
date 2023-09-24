@@ -37,11 +37,14 @@ class LMForwardAPI:
             'use_cache': True
             }
         self.ops_model = model_name
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace()
         if self.ops_model in ["vicuna", "wizardlm", 'openchat']:
             self.model = AutoModelForCausalLM.from_pretrained(
-                                HF_cache_dir, low_cpu_mem_usage=True, **kwargs
-                            ).cuda()
+                HF_cache_dir,
+                low_cpu_mem_usage=True,
+                device_map="auto",
+                **kwargs,
+            )
 
             self.tokenizer = AutoTokenizer.from_pretrained(
                                 HF_cache_dir,
@@ -86,17 +89,15 @@ class LMForwardAPI:
                 print('Get the embedding firstly to avoid issues')
             else:
                 raise NotImplementedError
-            mu_hat = np.mean(self.embedding.reshape(-1).detach().cpu().numpy())
-            std_hat = np.std(self.embedding.reshape(-1).detach().cpu().numpy())
+            mu_hat = self.embedding.reshape(-1).mean().item()
+            std_hat = self.embedding.reshape(-1).std().item()
             mu = 0.0
             std = args.alpha * std_hat / (np.sqrt(intrinsic_dim) * args.sigma)
 
             print('[Embedding] mu: {} | std: {} [RandProj]  mu: {} | std: {}'.format(mu_hat, std_hat, mu, std))
-            for p in self.linear.parameters():   
-                torch.nn.init.uniform_(p, -1, 1)
+            torch.nn.init.normal_(self.linear.weight, -1, 1)
         elif random_proj == 'uniform':  
-            for p in self.linear.parameters():   
-                torch.nn.init.uniform_(p, -1, 1)
+            torch.nn.init.uniform_(self.linear.weight, -1, 1)
 
         ## eval preparation
         self.conf = config.update_config(conf, base_conf)
@@ -271,7 +272,7 @@ def run(args):
 
     # standardization Y (no standardization for X)
     X_train = X
-    y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2))
+    y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2) + 1e-9)
 
     # define matern kernel
     matern_kernel = MaternKernel(
@@ -302,7 +303,7 @@ def run(args):
         start_time = time.time()
         EI = ExpectedImprovement(gp_model, best_f = y_train.max().item())
         
-        starting_idxs = torch.argsort(-1*y_train)[:BATCH_SIZE]
+        starting_idxs = torch.argsort(-1*y_train.squeeze())[:BATCH_SIZE]
         starting_points = X_train[starting_idxs]
 
 
@@ -337,7 +338,7 @@ def run(args):
 
         # standardization Y
         X_train = X.clone()
-        y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2))
+        y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2) + 1e-9)
 
         
         matern_kernel = MaternKernel(
