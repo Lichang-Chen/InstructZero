@@ -42,11 +42,7 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cud
 conda install botorch -c pytorch -c gpytorch -c conda-forge
 pip install -r requirements.txt # install other requirements
 ```
-- Setup APE
-```
-cd InstructZero
-python setup.py install
-```
+
 ## Usage
 1. Firstly, you need to prepare your OPENAI KEY.
 ```

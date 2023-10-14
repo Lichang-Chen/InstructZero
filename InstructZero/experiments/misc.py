@@ -59,7 +59,7 @@ def get_conf(task, eval_data):
     conf = {
         'generation': {
             'num_subsamples': 1,
-            'num_demos': 5,
+            'num_demos': 10,
             'num_prompts_per_subsample': 20,
             'model': {
                 'gpt_config': {

@@ -8,7 +8,7 @@ model_dir='WizardLM/WizardLM-13B-V1.1'
 MODEL_NAME='wizardlm'
 export TRANSFORMERS_CACHE=/fs/nexus-scratch/bobchen
 
-datasets=(antonyms)
+datasets=(informal_to_formal odd_one_out second_word_letter synonyms word_sorting letters_list)
 
 for i in ${datasets[@]}; do
     echo $i

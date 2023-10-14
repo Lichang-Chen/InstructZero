@@ -224,7 +224,7 @@ def run(args):
 
     # Get size of the induce data
     induce_data_size = len(induce_data[0])
-    prompt_gen_size = min(int(induce_data_size * 0.5), 100)
+    prompt_gen_size = min(int(induce_data_size), 100)
     # Induce data is split into prompt_gen_data and eval_data
     prompt_gen_data, eval_data = data.create_split(
         induce_data, prompt_gen_size)
@@ -233,7 +233,7 @@ def run(args):
     # For prompt_gen_data, sample a single item from the output list
     prompt_gen_data = prompt_gen_data[0], [random.sample(output, 1)[0]
                                            for output in prompt_gen_data[1]]
-
+    # import pdb; pdb.set_trace()
     demos_template = "Input: [INPUT]\nOutput: [OUTPUT]"
     eval_template = "Instruction: [PROMPT]\n\nInput: [INPUT]\n\nOUTPUT: [OUTPUT]" # change the evaluation template
     init_prompt = ['\n']
@@ -250,12 +250,10 @@ def run(args):
     d_template = template.DemosTemplate(demos_template)
     demos = d_template.fill(subsampled_data)
     init_qa = [prompt_gen_template.fill(demos)]
-
     
     model_forward_api = LMForwardAPI(model_name=args.model_name, eval_data=eval_data, init_prompt=init_prompt, 
                                     init_qa=init_qa, conf=conf, base_conf=base_conf, prompt_gen_data=prompt_gen_data, random_proj=random_proj, 
                                     intrinsic_dim=intrinsic_dim, n_prompt_tokens=n_prompt_tokens, HF_cache_dir=HF_cache_dir, args=args)
-    
         
     # start bayesian opt
     X = SobolEngine(dimension=intrinsic_dim, scramble=True, seed=0).draw(N_INIT)
@@ -263,12 +261,10 @@ def run(args):
     Y = [X[0] for X in X_return]
     Y_scores = [X[1].squeeze() for X in X_return]
     
-    
     X = X.to(**tkwargs)
     Y = torch.FloatTensor(Y).unsqueeze(-1).to(**tkwargs)
     Y_scores = torch.FloatTensor(np.array(Y_scores)).to(**tkwargs)
     print(f"Best initial point: {Y.max().item():.3f}")
-
 
     # standardization Y (no standardization for X)
     X_train = X
@@ -289,8 +285,6 @@ def run(args):
     covar_module = ScaleKernel(base_kernel=CombinedStringKernel(base_latent_kernel=matern_kernel, instruction_kernel=matern_kernel_instruction, latent_train=X_train.double(), instruction_train=Y_scores))
     gp_model = SingleTaskGP(X_train, y_train, covar_module=covar_module)
     gp_mll = ExactMarginalLogLikelihood(gp_model.likelihood, gp_model)
-    
-    
     
     for i in range(N_ITERATIONS):
         print(f"X_train shape {X_train.shape}")
@@ -326,7 +320,6 @@ def run(args):
             Y_next_point = [X[0] for X in X_next_points_return]
             Y_scores_next_points = [X[1].squeeze() for X in X_next_points_return]
     
-
             X_next_point = X_next_point.to(**tkwargs)
             Y_next_point = torch.FloatTensor(Y_next_point).unsqueeze(-1).to(**tkwargs)
             Y_scores_next_points = torch.FloatTensor(np.array(Y_scores_next_points)).to(**tkwargs)
@@ -335,30 +328,23 @@ def run(args):
             Y = torch.cat([Y, Y_next_point])
             Y_scores = torch.cat([Y_scores, Y_scores_next_points])
 
-
         # standardization Y
         X_train = X.clone()
         y_train = (Y - Y.mean(dim=-2))/(Y.std(dim=-2) + 1e-9)
 
-        
         matern_kernel = MaternKernel(
                         nu=2.5,
                         ard_num_dims=X_train.shape[-1],
                         lengthscale_prior=GammaPrior(3.0, 6.0),
                     )
-        
         matern_kernel_instruction = MaternKernel(
                 nu=2.5,
                 ard_num_dims=Y_scores.shape[-1],
                 lengthscale_prior=GammaPrior(3.0, 6.0),
             )
-
         covar_module = ScaleKernel(base_kernel=CombinedStringKernel(base_latent_kernel=matern_kernel, instruction_kernel=matern_kernel_instruction, latent_train=X_train.double(), instruction_train=Y_scores))
-
         gp_model = SingleTaskGP(X_train, y_train, covar_module=covar_module)
         gp_mll = ExactMarginalLogLikelihood(gp_model.likelihood, gp_model)
-
-    
         print(f"Best value found till now: {torch.max(Y)}")
 
     print('Evaluate on test data...')
@@ -395,5 +381,3 @@ if __name__ == '__main__':
     test_score = run(args=args)
     print("Finished!!!")
     print(f'Test score on ChatGPT: {test_score}')
-
-
