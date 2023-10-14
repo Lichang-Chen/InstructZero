@@ -1,13 +1,14 @@
-export CUDA_VISIBLE_DEVICES=7
+export CUDA_VISIBLE_DEVICES=0
 SFT=5
 RANDOM_PROJ='uniform'
 INTRINSIC_DIM=10
 # model_dir='lmsys/vicuna-13b-v1.3'
 # MODEL_NAME='vicuna'
 model_dir='WizardLM/WizardLM-13B-V1.1'
-MODEL_NAME='wizardlm' 
+MODEL_NAME='wizardlm'
+export TRANSFORMERS_CACHE=/fs/nexus-scratch/bobchen
 
-datasets=(antonyms cause_and_effect common_concept diff)
+datasets=(antonyms)
 
 for i in ${datasets[@]}; do
     echo $i

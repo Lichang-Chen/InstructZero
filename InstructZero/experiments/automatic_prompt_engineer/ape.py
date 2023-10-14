@@ -1,5 +1,5 @@
 import random
-from automatic_prompt_engineer import generate, evaluate, config, template, data, llm
+from . import generate, evaluate, config, template, data, llm
 
 
 def get_simple_prompt_gen_template(prompt_gen_template, prompt_gen_mode):

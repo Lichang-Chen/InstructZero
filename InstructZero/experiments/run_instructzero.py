@@ -241,7 +241,7 @@ def run(args):
     # prompt_gen_template = "[full_DEMO]\n\nWhat was the instruction for the task?"
     # prompt_gen_template = "[full_DEMO]\n\n Please generate appropriate instructions for the task."
 
-    base_conf = '../experiments/configs/instruction_induction.yaml'
+    base_conf = '../configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
 
     # make the demo automatically
