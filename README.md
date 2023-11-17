@@ -12,7 +12,7 @@ Find the optimal instruction is extremely important for achieving the "charm", a
 
 <br>
 
-If you have any questions, feel free to email the correspondence authors: Lichang Chen and Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
+If you have any questions, feel free to email the correspondence authors: Lichang Chen,  Jiuhai Chen. (bobchen, jchen169 AT umd.edu)
 ## News
 + [2023.7] We just got the Claude API key and our code will support GPT-4 and Claude(as API LLMs), WizardLM-13B and 30B~(as open-sourced LLMs) in the next week!
 + [2023.7] Now our code support vicuna-v1.3 models and WizardLM-v1.1 models as open-source LLMs.
