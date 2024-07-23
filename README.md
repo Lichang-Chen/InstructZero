@@ -1,4 +1,4 @@
-# InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models
+# InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models (ICML2024)
 
 Lichang Chen*, Jiuhai Chen*, Tom Goldstein, Heng Huang, Tianyi Zhou
 
